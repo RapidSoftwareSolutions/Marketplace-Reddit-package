@@ -1,3 +1,4 @@
+/src/metadata/conf*
 /vendor/
 test/rapid.*
 test/*.json
