@@ -1265,11 +1265,9 @@ Perform a search query. Somewhat untested due to the complexity of and possible 
 ## Reddit.usernameAvailable
 Presumably checks whether the specified username is available, but endpoint is not working at this time.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| appClientId| credentials| Id of your app.
-| accessToken| String     | Access token.
-| user       | String     | Username to check for availability.
+| Field | Type   | Description
+|-------|--------|----------
+| user  | String | Username to check for availability.
 
 ## Reddit.multiGetDescription
 Get a multi's description.

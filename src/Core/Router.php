@@ -63,7 +63,7 @@ class Router
         // Get method for vendor route
         if(
             isset($this->custom[$block['name']]['method'])&&
-            in_array($this->custom[$block['name']]['method'], ['GET', 'POST', 'PUT', 'DELETE', 'POST-Access'])
+            in_array($this->custom[$block['name']]['method'], ['GET', 'POST', 'PUT', 'DELETE', 'GET-NoAccess', 'POST-Access'])
         ){
             $method = $this->custom[$block['name']]['method'];
         }else{
@@ -271,7 +271,14 @@ class Router
         $result = [];
         try {
 
-            if($method != 'POST-Access'){
+            if($method == 'POST-Access'){
+                $method = 'POST';
+                $clientSetup = $sendBody;
+            }elseif($method == 'GET-NoAccess'){
+                $method = 'GET';
+                $clientSetup['query'] = json_decode($sendBody, true);
+                $clientSetup['headers']['User-Agent'] = 'RapidAPI-' . $appClientId;
+            }else{
                 // Setup client
                 $clientSetup = [
                     'headers' => [
@@ -286,16 +293,13 @@ class Router
                 }else{
                     $clientSetup['form_params'] = json_decode($sendBody, true);
                 }
-            }else{
-                $method = 'POST';
-                $clientSetup = $sendBody;
             }
 
             $vendorResponse = $this->http->request($method, $url, $clientSetup);
             $responseBody = $vendorResponse->getBody()->getContents();
 
             $result['callback'] = 'success';
-            if(empty(json_decode($responseBody))) {
+            if(empty(json_decode($responseBody))&&strlen($responseBody)==0) {
                 $result['contextWrites']['to'] = 'success' . $responseBody;
             } else {
                 $result['contextWrites']['to'] = json_decode($responseBody, true);

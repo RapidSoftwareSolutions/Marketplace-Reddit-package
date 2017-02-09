@@ -5318,18 +5318,6 @@
             "description": "Presumably checks whether the specified username is available, but endpoint is not working at this time.",
             "args": [
                 {
-                    "name": "appClientId",
-                    "type": "credentials",
-                    "info": "Id of your app.",
-                    "required": true
-                },
-                {
-                    "name": "accessToken",
-                    "type": "String",
-                    "info": "Access token.",
-                    "required": true
-                },
-                {
                     "name": "user",
                     "type": "String",
                     "info": "Username to check for availability.",

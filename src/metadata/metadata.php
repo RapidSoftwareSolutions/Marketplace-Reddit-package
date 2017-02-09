@@ -5338,19 +5338,6 @@ return array (
             'name' => 'usernameAvailable',
             'description' => 'Presumably checks whether the specified username is available, but endpoint is not working at this time.',
             'args' => array (
-                 array (
-                     'name' => 'appClientId',
-                     'type' => 'credentials',
-                     'info' => 'Id of your app.',
-                     'required' => true,
-                 ),
-                 array (
-                     'name' => 'accessToken',
-                     'type' => 'String',
-                     'info' => 'Access token.',
-                     'required' => true,
-                 ),
-
                 array (
                     'name' => 'user',
                     'type' => 'String',
@@ -9974,12 +9961,10 @@ return array (
         ),
         'usernameAvailable' => array (
             'dictionary'=> array (
-                'accessToken' => 'accessToken',
-                'appClientId' => 'appClientId',
                 'user' => 'user',
             ),
-            'vendorUrl' => 'https://oauth.reddit.com/api/username_available.json',
-            'method' => 'GET',
+            'vendorUrl' => 'https://www.reddit.com/api/username_available.json',
+            'method' => 'GET-NoAccess',
             'showApiType' => false,
         ),
         'multiGetDescription' => array (
