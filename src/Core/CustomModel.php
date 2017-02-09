@@ -82,6 +82,7 @@ class CustomModel
     public static function unblockUser($param, $blockCustom, $vendorUrl)
     {
         $param['type'] = 'enemy';
+        $param['container'] = $param['name'];
 
         return json_encode($param);
     }
