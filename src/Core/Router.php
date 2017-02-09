@@ -184,7 +184,7 @@ class Router
                 $response = [];
                 $response['callback'] = 'error';
                 $response['contextWrites']['to']['status_code'] = 'JSON_VALIDATION';
-                $response['contextWrites']['to']['status_msg'] = "Syntax error. Incorrect input JSON. Please, check fields withJSON input.";
+                $response['contextWrites']['to']['status_msg'] = "Syntax error. Incorrect input JSON. Please, check fields withJSON input. " . json_last_error_msg();
                 return json_encode($response);
             }
             $jsonParam = $requestBody['args'];
