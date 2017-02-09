@@ -9610,7 +9610,7 @@ return array (
                 'srDetail' => 'sr_detail',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/user/{{username}}/upvoted.json',
-            'method' => 'POST',
+            'method' => 'GET',
             'showApiType' => false,
         ),
         'getUserDownvoted' => array (
