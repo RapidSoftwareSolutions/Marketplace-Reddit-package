@@ -4392,7 +4392,7 @@
                     "required": true
                 },
                 {
-                    "name": "includeOver_18",
+                    "name": "includeOver18",
                     "type": "Boolean",
                     "info": "Include subreddits that are set as NSFW (over_18).",
                     "required": false
@@ -4450,7 +4450,7 @@
                     "required": false
                 },
                 {
-                    "name": "over_18",
+                    "name": "over18",
                     "type": "Boolean",
                     "info": "Include subreddits that are set as NSFW (over_18).",
                     "required": false
@@ -6860,7 +6860,7 @@
                     "required": false
                 },
                 {
-                    "name": "over_18",
+                    "name": "over18",
                     "type": "Boolean",
                     "info": "Is over 18, boolean value.",
                     "required": false
@@ -7518,7 +7518,7 @@
                     "required": false
                 },
                 {
-                    "name": "over_18",
+                    "name": "over18",
                     "type": "Boolean",
                     "info": "Is over 18, boolean value.",
                     "required": false

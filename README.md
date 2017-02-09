@@ -1056,7 +1056,7 @@ List subreddit names that begin with a query string.
 | appClientId          | credentials| Id of your app.
 | accessToken          | String     | Access token.
 | query                | String     | Search for subreddits that start with this. Maximum 50 characters, all printable.
-| includeOver_18       | Boolean    | Include subreddits that are set as NSFW (over_18).
+| includeOver18        | Boolean    | Include subreddits that are set as NSFW (over_18).
 | exact                | Boolean    | Only return exact match.
 | includeUnadvertisable| Boolean    | Only return subreddits that have hide_ads set to True or are on the anti_ads_subreddits list.
 
@@ -1069,7 +1069,7 @@ Retrieve a list of recommended subreddits based on the names of existing ones.
 | accessToken| String     | Access token.
 | srnames    | String     | Comma-delimited list of subreddits on which to base recommendations.
 | omit       | String     | Omit these specific subreddits from results (comma-delimited list of subreddit names).
-| over_18    | Boolean    | Include subreddits that are set as NSFW (over_18).
+| over18     | Boolean    | Include subreddits that are set as NSFW (over_18).
 
 ## Reddit.deleteSubredditImage
 Remove an image from the subreddit's custom image set.
@@ -1624,7 +1624,7 @@ Change a subreddit's configuration.
 | allowImages            | Boolean    | Allow images, boolean value.
 | allowTop               | Boolean    | Allow top, boolean value.
 | hideAds                | Boolean    | Hide ads, boolean value.
-| over_18                | Boolean    | Is over 18, boolean value.
+| over18                 | Boolean    | Is over 18, boolean value.
 | publicTraffic          | Boolean    | Public traffic, boolean value.
 | showMedia              | Boolean    | Show media, boolean value.
 | showMediaPreview       | Boolean    | Show media preview, boolean value.
@@ -1767,7 +1767,7 @@ Create a new subreddit.
 | allowImages            | Boolean    | Allow images, boolean value.
 | allowTop               | Boolean    | Allow top, boolean value.
 | hideAds                | Boolean    | Hide ads, boolean value.
-| over_18                | Boolean    | Is over 18, boolean value.
+| over18                 | Boolean    | Is over 18, boolean value.
 | publicTraffic          | Boolean    | Public traffic, boolean value.
 | showMedia              | Boolean    | Show media, boolean value.
 | showMediaPreview       | Boolean    | Show media preview, boolean value.
