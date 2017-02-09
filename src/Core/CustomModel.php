@@ -106,7 +106,10 @@ class CustomModel
         $paramList = ['display_name', 'description_md', 'icon_name', 'key_color', 'visibility', 'weighting_scheme'];
         foreach($paramList as $oneParam){
             if(isset($param[$oneParam])&&strlen($param[$oneParam])>0) {
-                $result['model'][$oneParam] = intval($param[$oneParam]);
+                $result['model'][$oneParam] = $param[$oneParam];
+                if(is_numeric($result['model'][$oneParam])){
+                    $result['model'][$oneParam] = intval($result['model'][$oneParam]);
+                }
             } }
         if(isset($param['subreddits_name'])&&strlen($param['subreddits_name'])>0) {
             $subredditsName = explode(',', $param['subreddits_name']);
@@ -120,7 +123,7 @@ class CustomModel
             $result['model'] = json_encode($result['model']);
         }
 
-        return json_encode($param);
+        return json_encode($result);
     }
 
     public static function multiAddSubreddit($param, $blockCustom, $vendorUrl)
@@ -153,7 +156,10 @@ class CustomModel
         $paramList = ['display_name', 'description_md', 'icon_name', 'key_color', 'visibility', 'weighting_scheme'];
         foreach($paramList as $oneParam){
             if(isset($param[$oneParam])&&strlen($param[$oneParam])>0) {
-                $result['model'][$oneParam] = intval($param[$oneParam]);
+                $result['model'][$oneParam] = $param[$oneParam];
+                if(is_numeric($result['model'][$oneParam])){
+                    $result['model'][$oneParam] = intval($result['model'][$oneParam]);
+                }
             } }
         if(isset($param['subreddits_name'])&&strlen($param['subreddits_name'])>0) {
             $subredditsName = explode(',', $param['subreddits_name']);
