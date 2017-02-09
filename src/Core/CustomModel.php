@@ -93,7 +93,8 @@ class CustomModel
         if(isset($param['note'])){
             $result['note'] = $param['note'];
         }
-        return json_encode($result);
+
+        return json_encode(['json' => json_encode($result)]);
     }
 
     public static function multiEdit($param, $blockCustom, $vendorUrl)

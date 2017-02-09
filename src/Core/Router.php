@@ -268,6 +268,8 @@ class Router
             $sendBody = '';
         }
 
+        var_dump($url, $method, $accessToken, $appClientId, $sendBody);
+
         $result = [];
         try {
 
