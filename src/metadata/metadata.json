@@ -3718,6 +3718,18 @@
             "description": "Obtain posts and comments upvoted by the specified user.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "username",
                     "type": "String",
                     "info": "Username of user for whom to retrieve records. Defaults to the current user.",
@@ -3787,6 +3799,18 @@
             "name": "getUserDownvoted",
             "description": "Obtain posts and comments downvoted by the specified user.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "username",
                     "type": "String",
@@ -3858,6 +3882,18 @@
             "description": "Obtain only comments made by the specified user.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "username",
                     "type": "String",
                     "info": "Username of user for whom to retrieve records. Defaults to the current user.",
@@ -3927,6 +3963,18 @@
             "name": "getUserSubmitted",
             "description": "Obtain only posts made by the specified user.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "username",
                     "type": "String",
@@ -3998,6 +4046,18 @@
             "description": "Obtain posts and comments gilded (given) by the specified user.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "username",
                     "type": "String",
                     "info": "Username of user for whom to retrieve records. Defaults to the current user.",
@@ -4067,6 +4127,18 @@
             "name": "getUserGildingsReceived",
             "description": "Obtain posts and comments gilded (received) by the specified user.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "username",
                     "type": "String",
@@ -4138,6 +4210,18 @@
             "description": "Obtain posts and comments saved by the specified user.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "username",
                     "type": "String",
                     "info": "Username of user for whom to retrieve records. Defaults to the current user.",
@@ -4207,6 +4291,18 @@
             "name": "getUserHidden",
             "description": "Obtain posts and comments hidden by the specified user.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "username",
                     "type": "String",
@@ -4278,6 +4374,18 @@
             "description": "List subreddit names that begin with a query string.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "query",
                     "type": "String",
                     "info": "Search for subreddits that start with this. Maximum 50 characters, all printable.",
@@ -4318,6 +4426,18 @@
             "description": "Retrieve a list of recommended subreddits based on the names of existing ones.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "srnames",
                     "type": "String",
                     "info": "Comma-delimited list of subreddits on which to base recommendations.",
@@ -4352,6 +4472,18 @@
             "description": "Remove an image from the subreddit's custom image set.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "Subreddit from which to remove the image.",
@@ -4379,6 +4511,18 @@
             "name": "getWikiContributors",
             "description": "Retrieve a list of approved wiki contributors from the specified subreddit. Must be a mod or approved wiki contributor in subreddit. Using pagination will result in the last item of the previous page appearing as the first item of the next page.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "subreddit",
                     "type": "String",
@@ -4444,6 +4588,18 @@
             "description": "Retrieve a list of approved submitters from the specified subreddit. Must be a mod or approved submitter in subreddit. Using pagination will result in the last item of the previous page appearing as the first item of the next page.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "Subreddit for which to retrieve approved wiki contributors.",
@@ -4507,6 +4663,18 @@
             "name": "getWikiBanned",
             "description": "Retrieve a list of wiki banned users from the specified subreddit. Must be a mod with access permissions. Using pagination will result in the last item of the previous page appearing as the first item of the next page.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "subreddit",
                     "type": "String",
@@ -4572,6 +4740,18 @@
             "description": "Retrieve a list of moderators from the specified subreddit. Must have read access to subreddit. This function does not use pagination, but it's here anyway in case that's changed in the future.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "Subreddit for which to retrieve moderators.",
@@ -4635,6 +4815,18 @@
             "name": "getMuted",
             "description": "Retrieve a list of muted users from the specified subreddit. Must be a mod with access permissions. Using pagination will result in the last item of the previous page appearing as the first item of the next page.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "subreddit",
                     "type": "String",
@@ -4700,6 +4892,18 @@
             "description": "Retrieve a list of banned users from the specified subreddit. Must be a mod with access permissions. Using pagination will result in the last item of the previous page appearing as the first item of the next page.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "Subreddit for which to retrieve banned.",
@@ -4764,6 +4968,18 @@
             "description": "Retrieves information about the specified subreddit, including subreddit ID.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "Subreddit for which to retrieve information.",
@@ -4785,6 +5001,18 @@
             "name": "deleteSubredditIcon",
             "description": "Remove the subreddit's custom mobile icon.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "subreddit",
                     "type": "String",
@@ -4808,6 +5036,18 @@
             "description": "Remove the subreddit's custom header image.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "Subreddit from which to remove the header image.",
@@ -4829,6 +5069,18 @@
             "name": "deleteSubredditBanner",
             "description": "Remove the subreddit's custom mobile banner.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "subreddit",
                     "type": "String",
@@ -4852,6 +5104,18 @@
             "description": "Unblock a user by username.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "name",
                     "type": "String",
                     "info": "Username of user to unblock.",
@@ -4874,6 +5138,18 @@
             "description": "Removes the specified user as a friend.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "id",
                     "type": "String",
                     "info": "Username of user to remove.",
@@ -4895,6 +5171,18 @@
             "name": "addFriend",
             "description": "Adds the specified user as a friend.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "name",
                     "type": "String",
@@ -4923,6 +5211,18 @@
             "name": "search",
             "description": "Perform a search query. Somewhat untested due to the complexity of and possible combinations to use in the search function.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "q",
                     "type": "String",
@@ -5018,6 +5318,18 @@
             "description": "Presumably checks whether the specified username is available, but endpoint is not working at this time.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "user",
                     "type": "String",
                     "info": "Username to check for availability.",
@@ -5040,6 +5352,18 @@
             "description": "Get a multi's description.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "multipath",
                     "type": "String",
                     "info": "Multireddit url path.",
@@ -5061,6 +5385,18 @@
             "name": "multiEdit",
             "description": "Create or update a multireddit.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "multipath",
                     "type": "String",
@@ -5132,6 +5468,18 @@
             "description": "Add the specified subreddit to the specified multireddit.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "multipath",
                     "type": "String",
                     "info": "Multireddit url path.",
@@ -5166,6 +5514,18 @@
             "description": "Get information about the specified subreddit in the specified multireddit.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "multipath",
                     "type": "String",
                     "info": "Name of multireddit.",
@@ -5193,6 +5553,18 @@
             "name": "multiRemoveSubreddit",
             "description": "Remove the specified subreddit from the specified multireddit.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "multipath",
                     "type": "String",
@@ -5222,6 +5594,18 @@
             "description": "Edit the description/sidebar for the specified multireddit.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "multipath",
                     "type": "String",
                     "info": "Multireddit url path.",
@@ -5249,6 +5633,18 @@
             "name": "getUserOverview",
             "description": "Obtain posts and comments made by the specified user.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "username",
                     "type": "String",
@@ -5320,6 +5716,18 @@
             "description": "Retrieve information about the specified user.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "username",
                     "type": "String",
                     "info": "Username of user to retrieve.",
@@ -5342,6 +5750,18 @@
             "description": "Get a user's trophies.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "id",
                     "type": "String",
                     "info": "Username of user for whom to retrieve trophies.",
@@ -5363,6 +5783,18 @@
             "name": "multiGet",
             "description": "Fetch a multi's data and subreddit list by name.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "multipath",
                     "type": "String",
@@ -5391,6 +5823,18 @@
             "name": "searchSubreddits",
             "description": "Search for subreddits by title and description.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "q",
                     "type": "String",
@@ -5450,6 +5894,18 @@
             "description": "Abdicate moderator status in a subreddit.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "id",
                     "type": "String",
                     "info": "Name of subreddit to leave.",
@@ -5471,6 +5927,18 @@
             "name": "getStickies",
             "description": "Retrieve a subreddit's stickied posts.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "subreddit",
                     "type": "String",
@@ -5500,6 +5968,18 @@
             "description": "Abdicate approved submitter status in a subreddit.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "id",
                     "type": "String",
                     "info": "Name of subreddit to leave.",
@@ -5522,6 +6002,18 @@
             "description": "Deletes the specified multireddit.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "multipath",
                     "type": "String",
                     "info": "Name of multireddit to delete.",
@@ -5543,6 +6035,18 @@
             "name": "multiGetUser",
             "description": "Retrieves a list of multireddits owned by the specified user.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "username",
                     "type": "String",
@@ -5572,6 +6076,18 @@
             "description": "Ignores reports for the specified thing.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "id",
                     "type": "String",
                     "info": "Thing ID of object to be ignored.",
@@ -5593,6 +6109,18 @@
             "name": "multiRename",
             "description": "Renames a multireddit.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "displayName",
                     "type": "String",
@@ -5628,6 +6156,18 @@
             "description": "Unmute a user from a subreddit based on the thing ID of a message they sent.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "id",
                     "type": "String",
                     "info": "Thing ID of the message author to be unmuted.",
@@ -5649,6 +6189,18 @@
             "name": "getPopularSubreddits",
             "description": "Retrieves a list of popular subreddits.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "after",
                     "type": "String",
@@ -5696,6 +6248,18 @@
             "description": "Retrieve a list of the current user's subreddits in which they are a moderator.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "after",
                     "type": "String",
                     "info": "Fullname of a thing.",
@@ -5742,6 +6306,18 @@
             "description": "Allow future reports on a thing to cause notifications.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "id",
                     "type": "String",
                     "info": "Thing ID of object to be unignored.",
@@ -5763,6 +6339,18 @@
             "name": "remove",
             "description": "Remove a link, comment, or modmail message.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "id",
                     "type": "String",
@@ -5791,6 +6379,18 @@
             "name": "getMyContributedSubreddits",
             "description": "Retrieve a list of the current user's subreddits in which they are an approved submitter.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "after",
                     "type": "String",
@@ -5838,6 +6438,18 @@
             "description": "Retrieve a list of the current user's subscribed subreddits.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "after",
                     "type": "String",
                     "info": "Fullname of a thing.",
@@ -5883,6 +6495,18 @@
             "name": "multiCreate",
             "description": "Create a multi. Responds with 409 Conflict if it already exists.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "multipath",
                     "type": "String",
@@ -5954,6 +6578,18 @@
             "description": "Mute a user from a subreddit based on the thing ID of a message they sent.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "id",
                     "type": "String",
                     "info": "Thing ID of the message author to be muted.",
@@ -5976,6 +6612,18 @@
             "description": "Retrieves a list of multireddits that are owned by the current user.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "expandSrs",
                     "type": "Boolean",
                     "info": "Expand subreddits.",
@@ -5997,6 +6645,18 @@
             "name": "multiCopy",
             "description": "Copy an existing multireddit to your own set.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "displayName",
                     "type": "String",
@@ -6031,6 +6691,18 @@
             "name": "editSubreddit",
             "description": "Change a subreddit's configuration.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "name",
                     "type": "String",
@@ -6246,6 +6918,18 @@
             "description": "Retrieves a list of default subreddits.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "after",
                     "type": "String",
                     "info": "Fullname of a thing.",
@@ -6291,6 +6975,18 @@
             "name": "getGoldOnlySubreddits",
             "description": "Retrieves a list of gold-only subreddits.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "after",
                     "type": "String",
@@ -6338,6 +7034,18 @@
             "description": "Retrieves a list of new subreddits.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "after",
                     "type": "String",
                     "info": "Fullname of a thing.",
@@ -6384,6 +7092,18 @@
             "description": "Get a subreddit's sidebar contents.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "Subreddit of which to retrieve sidebar.",
@@ -6406,6 +7126,18 @@
             "description": "Retrieve a list of the subreddit's settings. Must be a moderator.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "The subreddit to retrieve.",
@@ -6427,6 +7159,18 @@
             "name": "getModerationLog",
             "description": "Retrieves recent entries from the moderation log for the specified subreddit.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "subreddit",
                     "type": "String",
@@ -6492,6 +7236,18 @@
             "description": "Search for subreddits by topic keywords.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "query",
                     "type": "String",
                     "info": "Query with which to search.",
@@ -6513,6 +7269,18 @@
             "name": "setSubredditStylesheet",
             "description": "Set a subreddit's stylesheet.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "subreddit",
                     "type": "String",
@@ -6548,6 +7316,18 @@
             "description": "Retrieves the \"submitting to /r/&subreddit\" text for the selected subreddit.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "Name of subreddit from which to obtain submit text.",
@@ -6569,6 +7349,18 @@
             "name": "createSubreddit",
             "description": "Create a new subreddit.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "sr",
                     "type": "String",
@@ -6784,6 +7576,18 @@
             "description": "Get a subreddit's stylesheet.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "Subreddit of which to retrieve stylesheet.",
@@ -6805,6 +7609,18 @@
             "name": "subscribe",
             "description": "Subscribe to a subreddit. Must have read access to the subreddit.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "subreddit",
                     "type": "String",
@@ -6828,6 +7644,18 @@
             "description": "Unsubscribe from a subreddit.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "Subreddit from which to unsubscribe.",
@@ -6849,6 +7677,18 @@
             "name": "uploadSubredditImage",
             "description": "Upload an image to the specified subreddit.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "subreddit",
                     "type": "String",
@@ -6896,6 +7736,18 @@
             "description": "Mod distinguish a post or comment.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "id",
                     "type": "String",
                     "info": "Thing ID of object to distinguish.",
@@ -6924,6 +7776,18 @@
             "description": "Marks the specified thing as approved.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "id",
                     "type": "String",
                     "info": "Thing ID of object to be approved.",
@@ -6946,6 +7810,18 @@
             "description": "Accepts a moderator invitation for the specified subreddit. You must have a pending invitation for that subreddit.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "Subreddit to accept invitation.",
@@ -6967,6 +7843,18 @@
             "name": "getUnmoderated",
             "description": "Retrieves a list of things that have not been moderated in the specified subreddit.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "subreddit",
                     "type": "String",
@@ -7026,6 +7914,18 @@
             "description": "Allow the specified user to edit the specified wiki page.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "Subreddit of the wiki page.",
@@ -7059,6 +7959,18 @@
             "name": "wikiDisallowEditor",
             "description": "Remove the specified user from the allowed editors list of the specified wiki page.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "subreddit",
                     "type": "String",
@@ -7094,6 +8006,18 @@
             "description": "Retrieves a list of all pages of the specified subreddit's wiki.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "Subreddit for which to retrieve pages.",
@@ -7115,6 +8039,18 @@
             "name": "wikiGetPage",
             "description": "Retrieves the specified wiki page, optionally at a specific revision or a comparison between revisions.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "subreddit",
                     "type": "String",
@@ -7155,6 +8091,18 @@
             "name": "wikiGetRevisions",
             "description": "Retrieves a listing of wiki revisions for all pages within the specified subreddit.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "subreddit",
                     "type": "String",
@@ -7207,6 +8155,18 @@
             "name": "wikiGetPageRevisions",
             "description": "Retrieves a listing of wiki revisions for the specified page within the specified subreddit.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "subreddit",
                     "type": "String",
@@ -7266,6 +8226,18 @@
             "description": "Edit a wiki page.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "Subreddit in which to edit page.",
@@ -7312,6 +8284,18 @@
             "description": "Toggle a revision's status of hidden.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "Subreddit of revision.",
@@ -7346,6 +8330,18 @@
             "description": "Revert a wiki page to a previous revision.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "Subreddit of revision.",
@@ -7379,6 +8375,18 @@
             "name": "wikiGetPageDiscussions",
             "description": "Retrieves a listing of discussions about a certain wiki page.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "subreddit",
                     "type": "String",
@@ -7438,6 +8446,18 @@
             "description": "Get the specified page's settings in the specified subreddit.",
             "args": [
                 {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
+                {
                     "name": "subreddit",
                     "type": "String",
                     "info": "Subreddit of page.",
@@ -7465,6 +8485,18 @@
             "name": "wikiUpdatePageSettings",
             "description": "Update the specified page's settings in the specified subreddit.",
             "args": [
+                {
+                    "name": "appClientId",
+                    "type": "credentials",
+                    "info": "Id of your app.",
+                    "required": true
+                },
+                {
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Access token.",
+                    "required": true
+                },
                 {
                     "name": "subreddit",
                     "type": "String",

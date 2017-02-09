@@ -3721,6 +3721,18 @@ return array (
             'description' => 'Obtain posts and comments upvoted by the specified user.',
             'args' => array (
                 array (
+                    'name' => 'appClientId',
+                    'type' => 'credentials',
+                    'info' => 'Id of your app.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'accessToken',
+                    'type' => 'String',
+                    'info' => 'Access token.',
+                    'required' => true,
+                ),
+                array (
                     'name' => 'username',
                     'type' => 'String',
                     'info' => 'Username of user for whom to retrieve records. Defaults to the current user.',
@@ -3790,6 +3802,18 @@ return array (
             'name' => 'getUserDownvoted',
             'description' => 'Obtain posts and comments downvoted by the specified user.',
             'args' => array (
+                array (
+                    'name' => 'appClientId',
+                    'type' => 'credentials',
+                    'info' => 'Id of your app.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'accessToken',
+                    'type' => 'String',
+                    'info' => 'Access token.',
+                    'required' => true,
+                ),
                 array (
                     'name' => 'username',
                     'type' => 'String',
@@ -3861,6 +3885,18 @@ return array (
             'description' => 'Obtain only comments made by the specified user.',
             'args' => array (
                 array (
+                    'name' => 'appClientId',
+                    'type' => 'credentials',
+                    'info' => 'Id of your app.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'accessToken',
+                    'type' => 'String',
+                    'info' => 'Access token.',
+                    'required' => true,
+                ),
+                array (
                     'name' => 'username',
                     'type' => 'String',
                     'info' => 'Username of user for whom to retrieve records. Defaults to the current user.',
@@ -3930,6 +3966,18 @@ return array (
             'name' => 'getUserSubmitted',
             'description' => 'Obtain only posts made by the specified user.',
             'args' => array (
+                array (
+                    'name' => 'appClientId',
+                    'type' => 'credentials',
+                    'info' => 'Id of your app.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'accessToken',
+                    'type' => 'String',
+                    'info' => 'Access token.',
+                    'required' => true,
+                ),
                 array (
                     'name' => 'username',
                     'type' => 'String',
@@ -4001,6 +4049,18 @@ return array (
             'description' => 'Obtain posts and comments gilded (given) by the specified user.',
             'args' => array (
                 array (
+                    'name' => 'appClientId',
+                    'type' => 'credentials',
+                    'info' => 'Id of your app.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'accessToken',
+                    'type' => 'String',
+                    'info' => 'Access token.',
+                    'required' => true,
+                ),
+                array (
                     'name' => 'username',
                     'type' => 'String',
                     'info' => 'Username of user for whom to retrieve records. Defaults to the current user.',
@@ -4070,6 +4130,18 @@ return array (
             'name' => 'getUserGildingsReceived',
             'description' => 'Obtain posts and comments gilded (received) by the specified user.',
             'args' => array (
+                array (
+                    'name' => 'appClientId',
+                    'type' => 'credentials',
+                    'info' => 'Id of your app.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'accessToken',
+                    'type' => 'String',
+                    'info' => 'Access token.',
+                    'required' => true,
+                ),
                 array (
                     'name' => 'username',
                     'type' => 'String',
@@ -4141,6 +4213,18 @@ return array (
             'description' => 'Obtain posts and comments saved by the specified user.',
             'args' => array (
                 array (
+                    'name' => 'appClientId',
+                    'type' => 'credentials',
+                    'info' => 'Id of your app.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'accessToken',
+                    'type' => 'String',
+                    'info' => 'Access token.',
+                    'required' => true,
+                ),
+                array (
                     'name' => 'username',
                     'type' => 'String',
                     'info' => 'Username of user for whom to retrieve records. Defaults to the current user.',
@@ -4210,6 +4294,19 @@ return array (
             'name' => 'getUserHidden',
             'description' => 'Obtain posts and comments hidden by the specified user.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'username',
                     'type' => 'String',
@@ -4280,6 +4377,19 @@ return array (
             'name' => 'searchSubredditsByName',
             'description' => 'List subreddit names that begin with a query string.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'query',
                     'type' => 'String',
@@ -4320,6 +4430,19 @@ return array (
             'name' => 'getRecommendedSubreddits',
             'description' => 'Retrieve a list of recommended subreddits based on the names of existing ones.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'srnames',
                     'type' => 'String',
@@ -4354,6 +4477,19 @@ return array (
             'name' => 'deleteSubredditImage',
             'description' => 'Remove an image from the subreddit\'s custom image set.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -4382,6 +4518,19 @@ return array (
             'name' => 'getWikiContributors',
             'description' => 'Retrieve a list of approved wiki contributors from the specified subreddit. Must be a mod or approved wiki contributor in subreddit. Using pagination will result in the last item of the previous page appearing as the first item of the next page.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -4446,6 +4595,19 @@ return array (
             'name' => 'getContributors',
             'description' => 'Retrieve a list of approved submitters from the specified subreddit. Must be a mod or approved submitter in subreddit. Using pagination will result in the last item of the previous page appearing as the first item of the next page.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -4510,6 +4672,19 @@ return array (
             'name' => 'getWikiBanned',
             'description' => 'Retrieve a list of wiki banned users from the specified subreddit. Must be a mod with access permissions. Using pagination will result in the last item of the previous page appearing as the first item of the next page.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -4574,6 +4749,19 @@ return array (
             'name' => 'getModerators',
             'description' => 'Retrieve a list of moderators from the specified subreddit. Must have read access to subreddit. This function does not use pagination, but it\'s here anyway in case that\'s changed in the future.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -4638,6 +4826,19 @@ return array (
             'name' => 'getMuted',
             'description' => 'Retrieve a list of muted users from the specified subreddit. Must be a mod with access permissions. Using pagination will result in the last item of the previous page appearing as the first item of the next page.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -4702,6 +4903,19 @@ return array (
             'name' => 'getBanned',
             'description' => 'Retrieve a list of banned users from the specified subreddit. Must be a mod with access permissions. Using pagination will result in the last item of the previous page appearing as the first item of the next page.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -4766,6 +4980,19 @@ return array (
             'name' => 'aboutSubreddit',
             'description' => 'Retrieves information about the specified subreddit, including subreddit ID.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -4788,6 +5015,19 @@ return array (
             'name' => 'deleteSubredditIcon',
             'description' => 'Remove the subreddit\'s custom mobile icon.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -4810,6 +5050,19 @@ return array (
             'name' => 'deleteSubredditHeaderImage',
             'description' => 'Remove the subreddit\'s custom header image.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -4832,6 +5085,19 @@ return array (
             'name' => 'deleteSubredditBanner',
             'description' => 'Remove the subreddit\'s custom mobile banner.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -4854,6 +5120,19 @@ return array (
             'name' => 'unblockUser',
             'description' => 'Unblock a user by username.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'name',
                     'type' => 'String',
@@ -4876,6 +5155,19 @@ return array (
             'name' => 'removeFriend',
             'description' => 'Removes the specified user as a friend.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'id',
                     'type' => 'String',
@@ -4898,6 +5190,19 @@ return array (
             'name' => 'addFriend',
             'description' => 'Adds the specified user as a friend.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'name',
                     'type' => 'String',
@@ -4926,6 +5231,19 @@ return array (
             'name' => 'search',
             'description' => 'Perform a search query. Somewhat untested due to the complexity of and possible combinations to use in the search function.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'q',
                     'type' => 'String',
@@ -5020,6 +5338,19 @@ return array (
             'name' => 'usernameAvailable',
             'description' => 'Presumably checks whether the specified username is available, but endpoint is not working at this time.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'user',
                     'type' => 'String',
@@ -5042,6 +5373,19 @@ return array (
             'name' => 'multiGetDescription',
             'description' => 'Get a multi\'s description.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'multipath',
                     'type' => 'String',
@@ -5064,6 +5408,19 @@ return array (
             'name' => 'multiEdit',
             'description' => 'Create or update a multireddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'multipath',
                     'type' => 'String',
@@ -5134,6 +5491,19 @@ return array (
             'name' => 'multiAddSubreddit',
             'description' => 'Add the specified subreddit to the specified multireddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'multipath',
                     'type' => 'String',
@@ -5168,6 +5538,19 @@ return array (
             'name' => 'multiGetSubreddit',
             'description' => 'Get information about the specified subreddit in the specified multireddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'multipath',
                     'type' => 'String',
@@ -5196,6 +5579,19 @@ return array (
             'name' => 'multiRemoveSubreddit',
             'description' => 'Remove the specified subreddit from the specified multireddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'multipath',
                     'type' => 'String',
@@ -5224,6 +5620,19 @@ return array (
             'name' => 'multiEditDescription',
             'description' => 'Edit the description/sidebar for the specified multireddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'multipath',
                     'type' => 'String',
@@ -5252,6 +5661,19 @@ return array (
             'name' => 'getUserOverview',
             'description' => 'Obtain posts and comments made by the specified user.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'username',
                     'type' => 'String',
@@ -5322,6 +5744,19 @@ return array (
             'name' => 'getUser',
             'description' => 'Retrieve information about the specified user.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'username',
                     'type' => 'String',
@@ -5344,6 +5779,19 @@ return array (
             'name' => 'getUserTrophies',
             'description' => 'Get a user\'s trophies.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'id',
                     'type' => 'String',
@@ -5366,6 +5814,19 @@ return array (
             'name' => 'multiGet',
             'description' => 'Fetch a multi\'s data and subreddit list by name.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'multipath',
                     'type' => 'String',
@@ -5394,6 +5855,19 @@ return array (
             'name' => 'searchSubreddits',
             'description' => 'Search for subreddits by title and description.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'q',
                     'type' => 'String',
@@ -5452,6 +5926,19 @@ return array (
             'name' => 'leaveModerator',
             'description' => 'Abdicate moderator status in a subreddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'id',
                     'type' => 'String',
@@ -5474,6 +5961,19 @@ return array (
             'name' => 'getStickies',
             'description' => 'Retrieve a subreddit\'s stickied posts.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -5502,6 +6002,19 @@ return array (
             'name' => 'leaveContributor',
             'description' => 'Abdicate approved submitter status in a subreddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'id',
                     'type' => 'String',
@@ -5524,6 +6037,19 @@ return array (
             'name' => 'multiDelete',
             'description' => 'Deletes the specified multireddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'multipath',
                     'type' => 'String',
@@ -5546,6 +6072,19 @@ return array (
             'name' => 'multiGetUser',
             'description' => 'Retrieves a list of multireddits owned by the specified user.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'username',
                     'type' => 'String',
@@ -5574,6 +6113,19 @@ return array (
             'name' => 'ignoreReports',
             'description' => 'Ignores reports for the specified thing.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'id',
                     'type' => 'String',
@@ -5596,6 +6148,19 @@ return array (
             'name' => 'multiRename',
             'description' => 'Renames a multireddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'displayName',
                     'type' => 'String',
@@ -5630,6 +6195,19 @@ return array (
             'name' => 'unmuteUserByMessage',
             'description' => 'Unmute a user from a subreddit based on the thing ID of a message they sent.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'id',
                     'type' => 'String',
@@ -5652,6 +6230,19 @@ return array (
             'name' => 'getPopularSubreddits',
             'description' => 'Retrieves a list of popular subreddits.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'after',
                     'type' => 'String',
@@ -5698,6 +6289,19 @@ return array (
             'name' => 'getMyModeratedSubreddits',
             'description' => 'Retrieve a list of the current user\'s subreddits in which they are a moderator.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'after',
                     'type' => 'String',
@@ -5744,6 +6348,19 @@ return array (
             'name' => 'unignoreReports',
             'description' => 'Allow future reports on a thing to cause notifications.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'id',
                     'type' => 'String',
@@ -5766,6 +6383,19 @@ return array (
             'name' => 'remove',
             'description' => 'Remove a link, comment, or modmail message.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'id',
                     'type' => 'String',
@@ -5794,6 +6424,19 @@ return array (
             'name' => 'getMyContributedSubreddits',
             'description' => 'Retrieve a list of the current user\'s subreddits in which they are an approved submitter.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'after',
                     'type' => 'String',
@@ -5840,6 +6483,19 @@ return array (
             'name' => 'getMySubscribedSubreddits',
             'description' => 'Retrieve a list of the current user\'s subscribed subreddits.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'after',
                     'type' => 'String',
@@ -5886,6 +6542,19 @@ return array (
             'name' => 'multiCreate',
             'description' => 'Create a multi. Responds with 409 Conflict if it already exists.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'multipath',
                     'type' => 'String',
@@ -5956,6 +6625,19 @@ return array (
             'name' => 'muteUserByMessage',
             'description' => 'Mute a user from a subreddit based on the thing ID of a message they sent.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'id',
                     'type' => 'String',
@@ -5978,6 +6660,19 @@ return array (
             'name' => 'multiGetMine',
             'description' => 'Retrieves a list of multireddits that are owned by the current user.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'expandSrs',
                     'type' => 'Boolean',
@@ -6000,6 +6695,19 @@ return array (
             'name' => 'multiCopy',
             'description' => 'Copy an existing multireddit to your own set.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'displayName',
                     'type' => 'String',
@@ -6034,6 +6742,19 @@ return array (
             'name' => 'editSubreddit',
             'description' => 'Change a subreddit\'s configuration.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'name',
                     'type' => 'String',
@@ -6248,6 +6969,19 @@ return array (
             'name' => 'getDefaultSubreddits',
             'description' => 'Retrieves a list of default subreddits.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'after',
                     'type' => 'String',
@@ -6294,6 +7028,19 @@ return array (
             'name' => 'getGoldOnlySubreddits',
             'description' => 'Retrieves a list of gold-only subreddits.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'after',
                     'type' => 'String',
@@ -6340,6 +7087,19 @@ return array (
             'name' => 'getNewSubreddits',
             'description' => 'Retrieves a list of new subreddits.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'after',
                     'type' => 'String',
@@ -6386,6 +7146,19 @@ return array (
             'name' => 'getSubredditSidebar',
             'description' => 'Get a subreddit\'s sidebar contents.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -6408,6 +7181,19 @@ return array (
             'name' => 'getSubredditSettings',
             'description' => 'Retrieve a list of the subreddit\'s settings. Must be a moderator.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -6430,6 +7216,19 @@ return array (
             'name' => 'getModerationLog',
             'description' => 'Retrieves recent entries from the moderation log for the specified subreddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -6494,6 +7293,19 @@ return array (
             'name' => 'searchSubredditsByTopic',
             'description' => 'Search for subreddits by topic keywords.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'query',
                     'type' => 'String',
@@ -6516,6 +7328,19 @@ return array (
             'name' => 'setSubredditStylesheet',
             'description' => 'Set a subreddit\'s stylesheet.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -6550,6 +7375,19 @@ return array (
             'name' => 'getSubmitText',
             'description' => 'Retrieves the \"submitting to /r/&subreddit\" text for the selected subreddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -6572,6 +7410,19 @@ return array (
             'name' => 'createSubreddit',
             'description' => 'Create a new subreddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'sr',
                     'type' => 'String',
@@ -6786,6 +7637,19 @@ return array (
             'name' => 'getSubredditStylesheet',
             'description' => 'Get a subreddit\'s stylesheet.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -6808,6 +7672,19 @@ return array (
             'name' => 'subscribe',
             'description' => 'Subscribe to a subreddit. Must have read access to the subreddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -6830,6 +7707,19 @@ return array (
             'name' => 'unsubscribe',
             'description' => 'Unsubscribe from a subreddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -6852,6 +7742,19 @@ return array (
             'name' => 'uploadSubredditImage',
             'description' => 'Upload an image to the specified subreddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -6898,6 +7801,19 @@ return array (
             'name' => 'distinguish',
             'description' => 'Mod distinguish a post or comment.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'id',
                     'type' => 'String',
@@ -6926,6 +7842,19 @@ return array (
             'name' => 'approve',
             'description' => 'Marks the specified thing as approved.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'id',
                     'type' => 'String',
@@ -6948,6 +7877,19 @@ return array (
             'name' => 'acceptModeratorInvite',
             'description' => 'Accepts a moderator invitation for the specified subreddit. You must have a pending invitation for that subreddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -6970,6 +7912,19 @@ return array (
             'name' => 'getUnmoderated',
             'description' => 'Retrieves a list of things that have not been moderated in the specified subreddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -7028,6 +7983,19 @@ return array (
             'name' => 'wikiAllowEditor',
             'description' => 'Allow the specified user to edit the specified wiki page.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -7062,6 +8030,19 @@ return array (
             'name' => 'wikiDisallowEditor',
             'description' => 'Remove the specified user from the allowed editors list of the specified wiki page.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -7096,6 +8077,19 @@ return array (
             'name' => 'wikiGetPages',
             'description' => 'Retrieves a list of all pages of the specified subreddit\'s wiki.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -7118,6 +8112,19 @@ return array (
             'name' => 'wikiGetPage',
             'description' => 'Retrieves the specified wiki page, optionally at a specific revision or a comparison between revisions.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -7158,6 +8165,19 @@ return array (
             'name' => 'wikiGetRevisions',
             'description' => 'Retrieves a listing of wiki revisions for all pages within the specified subreddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -7210,6 +8230,19 @@ return array (
             'name' => 'wikiGetPageRevisions',
             'description' => 'Retrieves a listing of wiki revisions for the specified page within the specified subreddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -7268,6 +8301,19 @@ return array (
             'name' => 'wikiEditPage',
             'description' => 'Edit a wiki page.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -7314,6 +8360,19 @@ return array (
             'name' => 'wikiToggleHideRevision',
             'description' => 'Toggle a revision\'s status of hidden.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -7348,6 +8407,19 @@ return array (
             'name' => 'wikiRevertToRevision',
             'description' => 'Revert a wiki page to a previous revision.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -7382,6 +8454,19 @@ return array (
             'name' => 'wikiGetPageDiscussions',
             'description' => 'Retrieves a listing of discussions about a certain wiki page.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -7440,6 +8525,19 @@ return array (
             'name' => 'wikiGetPageSettings',
             'description' => 'Get the specified page\'s settings in the specified subreddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -7468,6 +8566,19 @@ return array (
             'name' => 'wikiUpdatePageSettings',
             'description' => 'Update the specified page\'s settings in the specified subreddit.',
             'args' => array (
+                 array (
+                     'name' => 'appClientId',
+                     'type' => 'credentials',
+                     'info' => 'Id of your app.',
+                     'required' => true,
+                 ),
+                 array (
+                     'name' => 'accessToken',
+                     'type' => 'String',
+                     'info' => 'Access token.',
+                     'required' => true,
+                 ),
+
                 array (
                     'name' => 'subreddit',
                     'type' => 'String',
@@ -8485,7 +9596,9 @@ return array (
             'showApiType' => false,
         ),
         'getUserUpvoted' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'username' => 'username',
                 'show' => 'show',
                 'sort' => 'sort',
@@ -8501,7 +9614,9 @@ return array (
             'showApiType' => false,
         ),
         'getUserDownvoted' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'username' => 'username',
                 'show' => 'show',
                 'sort' => 'sort',
@@ -8517,7 +9632,9 @@ return array (
             'showApiType' => false,
         ),
         'getUserComments' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'username' => 'username',
                 'show' => 'show',
                 'sort' => 'sort',
@@ -8533,7 +9650,9 @@ return array (
             'showApiType' => false,
         ),
         'getUserSubmitted' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'username' => 'username',
                 'show' => 'show',
                 'sort' => 'sort',
@@ -8549,7 +9668,9 @@ return array (
             'showApiType' => false,
         ),
         'getUserGildingsGiven' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'username' => 'username',
                 'show' => 'show',
                 'sort' => 'sort',
@@ -8565,7 +9686,9 @@ return array (
             'showApiType' => false,
         ),
         'getUserGildingsReceived' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'username' => 'username',
                 'show' => 'show',
                 'sort' => 'sort',
@@ -8581,7 +9704,9 @@ return array (
             'showApiType' => false,
         ),
         'getUserSaved' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'username' => 'username',
                 'show' => 'show',
                 'sort' => 'sort',
@@ -8597,7 +9722,9 @@ return array (
             'showApiType' => false,
         ),
         'getUserHidden' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'username' => 'username',
                 'show' => 'show',
                 'sort' => 'sort',
@@ -8613,7 +9740,9 @@ return array (
             'showApiType' => false,
         ),
         'searchSubredditsByName' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'query' => 'query',
                 'includeOver_18' => 'include_over_18',
                 'exact' => 'exact',
@@ -8624,7 +9753,9 @@ return array (
             'showApiType' => false,
         ),
         'getRecommendedSubreddits' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'srnames' => 'srnames',
                 'omit' => 'omit',
                 'over_18' => 'over_18',
@@ -8634,7 +9765,9 @@ return array (
             'showApiType' => false,
         ),
         'deleteSubredditImage' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'imageName' => 'image_name',
             ),
@@ -8643,7 +9776,9 @@ return array (
             'showApiType' => true,
         ),
         'getWikiContributors' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'user' => 'user',
                 'show' => 'show',
@@ -8658,7 +9793,9 @@ return array (
             'showApiType' => false,
         ),
         'getContributors' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'user' => 'user',
                 'show' => 'show',
@@ -8673,7 +9810,9 @@ return array (
             'showApiType' => false,
         ),
         'getWikiBanned' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'user' => 'user',
                 'show' => 'show',
@@ -8688,7 +9827,9 @@ return array (
             'showApiType' => false,
         ),
         'getModerators' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'user' => 'user',
                 'show' => 'show',
@@ -8703,7 +9844,9 @@ return array (
             'showApiType' => false,
         ),
         'getMuted' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'user' => 'user',
                 'show' => 'show',
@@ -8718,7 +9861,9 @@ return array (
             'showApiType' => false,
         ),
         'getBanned' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'user' => 'user',
                 'show' => 'show',
@@ -8733,7 +9878,9 @@ return array (
             'showApiType' => false,
         ),
         'aboutSubreddit' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
             ),
             'vendorUrl' => 'https://oauth.reddit.com[[/r/{{subreddit}}]]/about.json',
@@ -8741,7 +9888,9 @@ return array (
             'showApiType' => false,
         ),
         'deleteSubredditIcon' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
             ),
             'vendorUrl' => 'https://oauth.reddit.com[[/r/{{subreddit}}]]/api/delete_sr_icon',
@@ -8749,7 +9898,9 @@ return array (
             'showApiType' => true,
         ),
         'deleteSubredditHeaderImage' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
             ),
             'vendorUrl' => 'https://oauth.reddit.com[[/r/{{subreddit}}]]/api/delete_sr_header',
@@ -8757,7 +9908,9 @@ return array (
             'showApiType' => true,
         ),
         'deleteSubredditBanner' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
             ),
             'vendorUrl' => 'https://oauth.reddit.com[[/r/{{subreddit}}]]/api/delete_sr_banner',
@@ -8765,7 +9918,9 @@ return array (
             'showApiType' => true,
         ),
         'unblockUser' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'name' => 'name',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/unfriend',
@@ -8774,7 +9929,9 @@ return array (
             'custom' => true,
         ),
         'removeFriend' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'id' => 'id',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/v1/me/friends/{{id}}',
@@ -8782,7 +9939,9 @@ return array (
             'showApiType' => false,
         ),
         'addFriend' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'name' => 'name',
                 'note' => 'note',
             ),
@@ -8792,7 +9951,9 @@ return array (
             'custom' => true,
         ),
         'search' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'q' => 'q',
                 'subreddit' => 'subreddit',
                 'sort' => 'sort',
@@ -8812,7 +9973,9 @@ return array (
             'showApiType' => false,
         ),
         'usernameAvailable' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'user' => 'user',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/username_available.json',
@@ -8820,7 +9983,9 @@ return array (
             'showApiType' => false,
         ),
         'multiGetDescription' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'multipath' => 'multipath',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multipath}}/description',
@@ -8828,7 +9993,9 @@ return array (
             'showApiType' => false,
         ),
         'multiEdit' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'multipath' => 'multipath',
                 'displayName' => 'display_name',
                 'descriptionMd' => 'description_md',
@@ -8845,7 +10012,9 @@ return array (
             'custom' => true,
         ),
         'multiAddSubreddit' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'multipath' => 'multipath',
                 'srname' => 'srname',
                 'modelName' => 'model',
@@ -8856,7 +10025,9 @@ return array (
             'custom' => true,
         ),
         'multiGetSubreddit' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'multipath' => 'multipath',
                 'srname' => 'srname',
             ),
@@ -8865,7 +10036,9 @@ return array (
             'showApiType' => false,
         ),
         'multiRemoveSubreddit' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'multipath' => 'multipath',
                 'srname' => 'srname',
             ),
@@ -8874,7 +10047,9 @@ return array (
             'showApiType' => false,
         ),
         'multiEditDescription' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'multipath' => 'multipath',
                 'modelBodyMd' => 'model_body_md',
             ),
@@ -8884,7 +10059,9 @@ return array (
             'custom' => true,
         ),
         'getUserOverview' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'username' => 'username',
                 'sort' => 'sort',
                 'show' => 'show',
@@ -8900,7 +10077,9 @@ return array (
             'showApiType' => false,
         ),
         'getUser' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'username' => 'username',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/user/{{username}}/about.json',
@@ -8908,7 +10087,9 @@ return array (
             'showApiType' => false,
         ),
         'getUserTrophies' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'id' => 'id',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/v1/user/{{id}}/trophies',
@@ -8916,7 +10097,9 @@ return array (
             'showApiType' => false,
         ),
         'multiGet' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'multipath' => 'multipath',
                 'expandSrs' => 'expand_srs',
             ),
@@ -8925,7 +10108,9 @@ return array (
             'showApiType' => false,
         ),
         'searchSubreddits' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'q' => 'q',
                 'sort' => 'sort',
                 'after' => 'after',
@@ -8939,7 +10124,9 @@ return array (
             'showApiType' => false,
         ),
         'leaveModerator' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'id' => 'id',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/leavemoderator',
@@ -8947,7 +10134,9 @@ return array (
             'showApiType' => false,
         ),
         'getStickies' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'num' => 'num',
             ),
@@ -8956,7 +10145,9 @@ return array (
             'showApiType' => false,
         ),
         'leaveContributor' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'id' => 'id',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/leavecontributor',
@@ -8964,7 +10155,9 @@ return array (
             'showApiType' => false,
         ),
         'multiDelete' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'multipath' => 'multipath',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multipath}}',
@@ -8972,7 +10165,9 @@ return array (
             'showApiType' => false,
         ),
         'multiGetUser' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'username' => 'username',
                 'expandSrs' => 'expand_srs',
             ),
@@ -8981,7 +10176,9 @@ return array (
             'showApiType' => false,
         ),
         'ignoreReports' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'id' => 'id',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/ignore_reports',
@@ -8989,7 +10186,9 @@ return array (
             'showApiType' => false,
         ),
         'multiRename' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'displayName' => 'display_name',
                 'from' => 'from',
                 'to' => 'to',
@@ -8999,7 +10198,9 @@ return array (
             'showApiType' => false,
         ),
         'unmuteUserByMessage' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'id' => 'id',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/unmute_message_author',
@@ -9007,7 +10208,9 @@ return array (
             'showApiType' => false,
         ),
         'getPopularSubreddits' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'after' => 'after',
                 'before' => 'before',
                 'count' => 'count',
@@ -9019,7 +10222,9 @@ return array (
             'showApiType' => false,
         ),
         'getMyModeratedSubreddits' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'after' => 'after',
                 'before' => 'before',
                 'count' => 'count',
@@ -9031,7 +10236,9 @@ return array (
             'showApiType' => false,
         ),
         'unignoreReports' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'id' => 'id',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/unignore_reports',
@@ -9039,7 +10246,9 @@ return array (
             'showApiType' => false,
         ),
         'remove' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'id' => 'id',
                 'spam' => 'spam',
             ),
@@ -9048,7 +10257,9 @@ return array (
             'showApiType' => false,
         ),
         'getMyContributedSubreddits' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'after' => 'after',
                 'before' => 'before',
                 'count' => 'count',
@@ -9060,7 +10271,9 @@ return array (
             'showApiType' => false,
         ),
         'getMySubscribedSubreddits' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'after' => 'after',
                 'before' => 'before',
                 'count' => 'count',
@@ -9072,7 +10285,9 @@ return array (
             'showApiType' => false,
         ),
         'multiCreate' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'multipath' => 'multipath',
                 'displayName' => 'display_name',
                 'descriptionMd' => 'description_md',
@@ -9089,7 +10304,9 @@ return array (
             'custom' => true,
         ),
         'muteUserByMessage' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'id' => 'id',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/mute_message_author',
@@ -9097,7 +10314,9 @@ return array (
             'showApiType' => false,
         ),
         'multiGetMine' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'expandSrs' => 'expand_srs',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/multi/mine',
@@ -9105,7 +10324,9 @@ return array (
             'showApiType' => false,
         ),
         'multiCopy' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'displayName' => 'display_name',
                 'from' => 'from',
                 'to' => 'to',
@@ -9115,7 +10336,9 @@ return array (
             'showApiType' => false,
         ),
         'editSubreddit' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'name' => 'name',
                 'publicDescription' => 'public_description',
                 'description' => 'description',
@@ -9155,7 +10378,9 @@ return array (
             'showApiType' => false,
         ),
         'getDefaultSubreddits' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'after' => 'after',
                 'before' => 'before',
                 'count' => 'count',
@@ -9167,7 +10392,9 @@ return array (
             'showApiType' => false,
         ),
         'getGoldOnlySubreddits' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'after' => 'after',
                 'before' => 'before',
                 'count' => 'count',
@@ -9179,7 +10406,9 @@ return array (
             'showApiType' => false,
         ),
         'getNewSubreddits' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'after' => 'after',
                 'before' => 'before',
                 'count' => 'count',
@@ -9191,7 +10420,9 @@ return array (
             'showApiType' => false,
         ),
         'getSubredditSidebar' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
             ),
             'vendorUrl' => 'https://oauth.reddit.com[[/r/{{subreddit}}]]/wiki/config/sidebar.json',
@@ -9199,7 +10430,9 @@ return array (
             'showApiType' => false,
         ),
         'getSubredditSettings' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
             ),
             'vendorUrl' => 'https://oauth.reddit.com[[/r/{{subreddit}}]]/about/edit.json',
@@ -9207,7 +10440,9 @@ return array (
             'showApiType' => false,
         ),
         'getModerationLog' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'mod' => 'mod',
                 'type' => 'type',
@@ -9222,7 +10457,9 @@ return array (
             'showApiType' => false,
         ),
         'searchSubredditsByTopic' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'query' => 'query',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/subreddits_by_topic',
@@ -9230,7 +10467,9 @@ return array (
             'showApiType' => false,
         ),
         'setSubredditStylesheet' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'stylesheetContents' => 'stylesheet_contents',
                 'reason' => 'reason',
@@ -9241,7 +10480,9 @@ return array (
             'custom' => true,
         ),
         'getSubmitText' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
             ),
             'vendorUrl' => 'https://oauth.reddit.com[[/r/{{subreddit}}]]/api/submit_text',
@@ -9249,7 +10490,9 @@ return array (
             'showApiType' => false,
         ),
         'createSubreddit' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'sr' => 'sr',
                 'name' => 'name',
                 'publicDescription' => 'public_description',
@@ -9289,7 +10532,9 @@ return array (
             'showApiType' => true,
         ),
         'getSubredditStylesheet' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
             ),
             'vendorUrl' => 'https://oauth.reddit.com[[/r/{{subreddit}}]]/wiki/config/stylesheet.json',
@@ -9297,7 +10542,9 @@ return array (
             'showApiType' => false,
         ),
         'subscribe' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'sr_name',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/subscribe',
@@ -9306,7 +10553,9 @@ return array (
             'custom' => true,
         ),
         'unsubscribe' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'sr_name',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/subscribe',
@@ -9315,7 +10564,9 @@ return array (
             'custom' => true,
         ),
         'uploadSubredditImage' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'file' => 'file',
                 'name' => 'name',
@@ -9327,7 +10578,9 @@ return array (
             'showApiType' => false,
         ),
         'distinguish' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'id' => 'id',
                 'how' => 'how',
             ),
@@ -9336,7 +10589,9 @@ return array (
             'showApiType' => true,
         ),
         'approve' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'id' => 'id',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/approve',
@@ -9344,7 +10599,9 @@ return array (
             'showApiType' => false,
         ),
         'acceptModeratorInvite' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
             ),
             'vendorUrl' => 'https://oauth.reddit.com[[/r/{{subreddit}}]]/api/accept_moderator_invite',
@@ -9352,7 +10609,9 @@ return array (
             'showApiType' => true,
         ),
         'getUnmoderated' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'only' => 'only',
                 'after' => 'after',
@@ -9366,7 +10625,9 @@ return array (
             'showApiType' => false,
         ),
         'wikiAllowEditor' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'username' => 'username',
                 'page' => 'page',
@@ -9376,7 +10637,9 @@ return array (
             'showApiType' => false,
         ),
         'wikiDisallowEditor' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'username' => 'username',
                 'page' => 'page',
@@ -9386,7 +10649,9 @@ return array (
             'showApiType' => false,
         ),
         'wikiGetPages' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
             ),
             'vendorUrl' => 'https://oauth.reddit.com[[/r/{{subreddit}}]]/wiki/pages',
@@ -9394,7 +10659,9 @@ return array (
             'showApiType' => false,
         ),
         'wikiGetPage' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'page' => 'page',
                 'v' => 'v',
@@ -9405,7 +10672,9 @@ return array (
             'showApiType' => false,
         ),
         'wikiGetRevisions' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'after' => 'after',
                 'before' => 'before',
@@ -9418,7 +10687,9 @@ return array (
             'showApiType' => false,
         ),
         'wikiGetPageRevisions' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'page' => 'page',
                 'after' => 'after',
@@ -9432,7 +10703,9 @@ return array (
             'showApiType' => false,
         ),
         'wikiEditPage' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'page' => 'page',
                 'content' => 'content',
@@ -9444,7 +10717,9 @@ return array (
             'showApiType' => false,
         ),
         'wikiToggleHideRevision' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'page' => 'page',
                 'revision' => 'revision',
@@ -9454,7 +10729,9 @@ return array (
             'showApiType' => false,
         ),
         'wikiRevertToRevision' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'page' => 'page',
                 'revision' => 'revision',
@@ -9464,7 +10741,9 @@ return array (
             'showApiType' => false,
         ),
         'wikiGetPageDiscussions' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'page' => 'page',
                 'after' => 'after',
@@ -9478,7 +10757,9 @@ return array (
             'showApiType' => false,
         ),
         'wikiGetPageSettings' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'page' => 'page',
             ),
@@ -9487,7 +10768,9 @@ return array (
             'showApiType' => false,
         ),
         'wikiUpdatePageSettings' => array (
-            'dictionary' => array (
+            'dictionary'=> array (
+                'accessToken' => 'accessToken',
+                'appClientId' => 'appClientId',
                 'subreddit' => 'subreddit',
                 'page' => 'page',
                 'permlevel' => 'permlevel',
