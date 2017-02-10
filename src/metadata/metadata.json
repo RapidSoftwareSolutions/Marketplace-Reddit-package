@@ -6152,12 +6152,6 @@
           "required": true
         },
         {
-          "name": "displayName",
-          "type": "String",
-          "info": "A string no longer than 50 characters.",
-          "required": true
-        },
-        {
           "name": "multiredditOwner",
           "type": "String",
           "info": "Username of multireddit owner.",
