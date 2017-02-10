@@ -1272,11 +1272,12 @@ Presumably checks whether the specified username is available, but endpoint is n
 ## Reddit.multiGetDescription
 Get a multi's description.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| appClientId| credentials| Id of your app.
-| accessToken| String     | Access token.
-| multipath  | String     | Multireddit url path.
+| Field            | Type       | Description
+|------------------|------------|----------
+| appClientId      | credentials| Id of your app.
+| accessToken      | String     | Access token.
+| multireddit      | String     | Multireddit name.
+| multiredditOwner | String     | Username of multireddit owner.
 
 ## Reddit.multiEdit
 Create or update a multireddit.

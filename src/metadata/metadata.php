@@ -5374,9 +5374,15 @@ return array (
                  ),
 
                 array (
-                    'name' => 'multipath',
+                    'name' => 'multireddit',
                     'type' => 'String',
-                    'info' => 'Multireddit url path.',
+                    'info' => 'Multireddit name.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'multiredditOwner',
+                    'type' => 'String',
+                    'info' => 'Username of multireddit owner.',
                     'required' => true,
                 ),
             ),
@@ -10018,11 +10024,13 @@ return array (
             'dictionary'=> array (
                 'accessToken' => 'accessToken',
                 'appClientId' => 'appClientId',
-                'multipath' => 'multipath',
+                'multireddit' => 'multipath',
+                'multiredditOwner' => 'multiredditOwner',
             ),
-            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multipath}}/description',
+            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multireddit}}/description',
             'method' => 'GET',
             'showApiType' => false,
+            'custom' => true,
         ),
         'multiEdit' => array (
             'dictionary'=> array (

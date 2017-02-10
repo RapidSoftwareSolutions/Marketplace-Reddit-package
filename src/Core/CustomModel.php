@@ -97,6 +97,13 @@ class CustomModel
         return json_encode(['json' => json_encode($result)]);
     }
 
+    public static function multiGetDescription($param, $blockCustom, $vendorUrl)
+    {
+        $result['multipath'] = 'user/' . $param['multiredditOwner'] . '/m/' . $param['multipath'];
+
+        return json_encode($result);
+    }
+
     public static function multiEdit($param, $blockCustom, $vendorUrl)
     {
         $result['multipath'] = 'user/' . $param['multiredditOwner'] . '/m/' . $param['multipath'];

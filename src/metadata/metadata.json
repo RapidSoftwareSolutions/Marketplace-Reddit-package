@@ -21,7 +21,7 @@
   "blocks": [
     {
       "name": "getAccessToken",
-      "description": "Get access token from code provided in the redirect described.",
+      "description": ""description": "Get access token from code provided in the redirect described.",
       "args": [
         {
           "name": "appClientId",
@@ -5352,11 +5352,17 @@
           "required": true
         },
         {
-          "name": "multipath",
+          "name": "multireddit",
           "type": "String",
-          "info": "Multireddit url path.",
+          "info": "Multireddit name.",
           "required": true
-        }
+        },
+        {
+          "name": "multiredditOwner",
+          "type": "String",
+          "info": "Username of multireddit owner.",
+          "required": true
+        },
       ],
       "callbacks": [
         {
