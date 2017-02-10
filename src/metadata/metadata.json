@@ -5386,9 +5386,15 @@
                     "required": true
                 },
                 {
-                    "name": "multipath",
+                    "name": "multireddit",
                     "type": "String",
-                    "info": "Multireddit url path.",
+                    "info": "Multireddit name.",
+                    "required": true
+                },
+                {
+                    "name": "multiredditOwner",
+                    "type": "String",
+                    "info": "Username of multireddit owner.",
                     "required": true
                 },
                 {
@@ -5468,22 +5474,22 @@
                     "required": true
                 },
                 {
-                    "name": "multipath",
+                    "name": "multireddit",
                     "type": "String",
-                    "info": "Multireddit url path.",
+                    "info": "Multireddit name.",
                     "required": true
                 },
                 {
-                    "name": "srname",
+                    "name": "multiredditOwner",
+                    "type": "String",
+                    "info": "Username of multireddit owner.",
+                    "required": true
+                },
+                {
+                    "name": "subredditName",
                     "type": "String",
                     "info": "Name of subreddit to add.",
                     "required": true
-                },
-                {
-                    "name": "modelName",
-                    "type": "String",
-                    "info": "Name of subreddit.",
-                    "required": false
                 }
             ],
             "callbacks": [
@@ -5514,13 +5520,19 @@
                     "required": true
                 },
                 {
-                    "name": "multipath",
+                    "name": "multireddit",
                     "type": "String",
-                    "info": "Name of multireddit.",
+                    "info": "Multireddit name.",
                     "required": true
                 },
                 {
-                    "name": "srname",
+                    "name": "multiredditOwner",
+                    "type": "String",
+                    "info": "Username of multireddit owner.",
+                    "required": true
+                },
+                {
+                    "name": "subredditName",
                     "type": "String",
                     "info": "Subreddit for which to obtain information.",
                     "required": true
@@ -5554,13 +5566,19 @@
                     "required": true
                 },
                 {
-                    "name": "multipath",
+                    "name": "multireddit",
                     "type": "String",
-                    "info": "Name of multireddit.",
+                    "info": "Multireddit name.",
                     "required": true
                 },
                 {
-                    "name": "srname",
+                    "name": "multiredditOwner",
+                    "type": "String",
+                    "info": "Username of multireddit owner.",
+                    "required": true
+                },
+                {
+                    "name": "subredditName",
                     "type": "String",
                     "info": "Name of subreddit to remove.",
                     "required": true
@@ -5594,9 +5612,15 @@
                     "required": true
                 },
                 {
-                    "name": "multipath",
+                    "name": "multireddit",
                     "type": "String",
-                    "info": "Multireddit url path.",
+                    "info": "Multireddit name.",
+                    "required": true
+                },
+                {
+                    "name": "multiredditOwner",
+                    "type": "String",
+                    "info": "Username of multireddit owner.",
                     "required": true
                 },
                 {
@@ -5784,9 +5808,15 @@
                     "required": true
                 },
                 {
-                    "name": "multipath",
+                    "name": "multireddit",
                     "type": "String",
-                    "info": "Name of multireddit to retrieve.",
+                    "info": "Multireddit name.",
+                    "required": true
+                },
+                {
+                    "name": "multiredditOwner",
+                    "type": "String",
+                    "info": "Username of multireddit owner.",
                     "required": true
                 },
                 {
@@ -6002,11 +6032,17 @@
                     "required": true
                 },
                 {
-                    "name": "multipath",
+                    "name": "multireddit",
                     "type": "String",
-                    "info": "Name of multireddit to delete.",
+                    "info": "Multireddit name.",
                     "required": true
-                }
+                },
+                {
+                    "name": "multiredditOwner",
+                    "type": "String",
+                    "info": "Username of multireddit owner.",
+                    "required": true
+                },
             ],
             "callbacks": [
                 {
@@ -6116,6 +6152,12 @@
                     "required": true
                 },
                 {
+                    "name": "multiredditOwner",
+                    "type": "String",
+                    "info": "Username of multireddit owner.",
+                    "required": true
+                },
+                {
                     "name": "from",
                     "type": "String",
                     "info": "Name of multireddit to rename.",
@@ -6126,6 +6168,12 @@
                     "type": "String",
                     "info": "Destination name.",
                     "required": true
+                },
+                {
+                    "name": "displayName",
+                    "type": "String",
+                    "info": "A string no longer than 50 characters.",
+                    "required": false
                 }
             ],
             "callbacks": [
@@ -6496,9 +6544,15 @@
                     "required": true
                 },
                 {
-                    "name": "multipath",
+                    "name": "multireddit",
                     "type": "String",
-                    "info": "Multireddit url path.",
+                    "info": "Multireddit name.",
+                    "required": true
+                },
+                {
+                    "name": "multiredditOwner",
+                    "type": "String",
+                    "info": "Username of multireddit owner.",
                     "required": true
                 },
                 {
@@ -6646,9 +6700,9 @@
                     "required": true
                 },
                 {
-                    "name": "displayName",
+                    "name": "multiredditOwner",
                     "type": "String",
-                    "info": "A string no longer than 50 characters.",
+                    "info": "Username of multireddit owner.",
                     "required": true
                 },
                 {
@@ -6662,6 +6716,12 @@
                     "type": "String",
                     "info": "Name of destination multireddit.",
                     "required": true
+                },
+                {
+                    "name": "displayName",
+                    "type": "String",
+                    "info": "A string no longer than 50 characters.",
+                    "required": false
                 }
             ],
             "callbacks": [
@@ -7847,7 +7907,7 @@
                     "name": "subreddit",
                     "type": "String",
                     "info": "Subreddit of items to retrieve. All moderated subreddits by default.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "only",

@@ -5409,9 +5409,15 @@ return array (
                  ),
 
                 array (
-                    'name' => 'multipath',
+                    'name' => 'multireddit',
                     'type' => 'String',
-                    'info' => 'Multireddit url path.',
+                    'info' => 'Multireddit name.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'multiredditOwner',
+                    'type' => 'String',
+                    'info' => 'Username of multireddit owner.',
                     'required' => true,
                 ),
                 array (
@@ -5490,24 +5496,23 @@ return array (
                      'info' => 'Access token.',
                      'required' => true,
                  ),
-
                 array (
-                    'name' => 'multipath',
+                    'name' => 'multireddit',
                     'type' => 'String',
-                    'info' => 'Multireddit url path.',
+                    'info' => 'Multireddit name.',
                     'required' => true,
                 ),
                 array (
-                    'name' => 'srname',
+                    'name' => 'multiredditOwner',
+                    'type' => 'String',
+                    'info' => 'Username of multireddit owner.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'subredditName',
                     'type' => 'String',
                     'info' => 'Name of subreddit to add.',
                     'required' => true,
-                ),
-                array (
-                    'name' => 'modelName',
-                    'type' => 'String',
-                    'info' => 'Name of subreddit.',
-                    'required' => false,
                 ),
             ),
             'callbacks' => array (
@@ -5539,13 +5544,19 @@ return array (
                  ),
 
                 array (
-                    'name' => 'multipath',
+                    'name' => 'multireddit',
                     'type' => 'String',
-                    'info' => 'Name of multireddit.',
+                    'info' => 'Multireddit name.',
                     'required' => true,
                 ),
                 array (
-                    'name' => 'srname',
+                    'name' => 'multiredditOwner',
+                    'type' => 'String',
+                    'info' => 'Username of multireddit owner.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'subredditName',
                     'type' => 'String',
                     'info' => 'Subreddit for which to obtain information.',
                     'required' => true,
@@ -5578,15 +5589,20 @@ return array (
                      'info' => 'Access token.',
                      'required' => true,
                  ),
-
                 array (
-                    'name' => 'multipath',
+                    'name' => 'multireddit',
                     'type' => 'String',
-                    'info' => 'Name of multireddit.',
+                    'info' => 'Multireddit name.',
                     'required' => true,
                 ),
                 array (
-                    'name' => 'srname',
+                    'name' => 'multiredditOwner',
+                    'type' => 'String',
+                    'info' => 'Username of multireddit owner.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'subredditName',
                     'type' => 'String',
                     'info' => 'Name of subreddit to remove.',
                     'required' => true,
@@ -5619,11 +5635,16 @@ return array (
                      'info' => 'Access token.',
                      'required' => true,
                  ),
-
                 array (
-                    'name' => 'multipath',
+                    'name' => 'multireddit',
                     'type' => 'String',
-                    'info' => 'Multireddit url path.',
+                    'info' => 'Multireddit name.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'multiredditOwner',
+                    'type' => 'String',
+                    'info' => 'Username of multireddit owner.',
                     'required' => true,
                 ),
                 array (
@@ -5813,11 +5834,16 @@ return array (
                      'info' => 'Access token.',
                      'required' => true,
                  ),
-
                 array (
-                    'name' => 'multipath',
+                    'name' => 'multireddit',
                     'type' => 'String',
-                    'info' => 'Name of multireddit to retrieve.',
+                    'info' => 'Multireddit name.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'multiredditOwner',
+                    'type' => 'String',
+                    'info' => 'Username of multireddit owner.',
                     'required' => true,
                 ),
                 array (
@@ -6038,9 +6064,15 @@ return array (
                  ),
 
                 array (
-                    'name' => 'multipath',
+                    'name' => 'multireddit',
                     'type' => 'String',
-                    'info' => 'Name of multireddit to delete.',
+                    'info' => 'Multireddit name.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'multiredditOwner',
+                    'type' => 'String',
+                    'info' => 'Username of multireddit owner.',
                     'required' => true,
                 ),
             ),
@@ -6147,11 +6179,10 @@ return array (
                      'info' => 'Access token.',
                      'required' => true,
                  ),
-
                 array (
-                    'name' => 'displayName',
+                    'name' => 'multiredditOwner',
                     'type' => 'String',
-                    'info' => 'A string no longer than 50 characters.',
+                    'info' => 'Username of multireddit owner.',
                     'required' => true,
                 ),
                 array (
@@ -6165,6 +6196,12 @@ return array (
                     'type' => 'String',
                     'info' => 'Destination name.',
                     'required' => true,
+                ),
+                array (
+                    'name' => 'displayName',
+                    'type' => 'String',
+                    'info' => 'A string no longer than 50 characters.',
+                    'required' => false,
                 ),
             ),
             'callbacks' => array (
@@ -6541,11 +6578,16 @@ return array (
                      'info' => 'Access token.',
                      'required' => true,
                  ),
-
                 array (
-                    'name' => 'multipath',
+                    'name' => 'multireddit',
                     'type' => 'String',
-                    'info' => 'Multireddit url path.',
+                    'info' => 'Multireddit name.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'multiredditOwner',
+                    'type' => 'String',
+                    'info' => 'Username of multireddit owner.',
                     'required' => true,
                 ),
                 array (
@@ -6694,11 +6736,10 @@ return array (
                      'info' => 'Access token.',
                      'required' => true,
                  ),
-
                 array (
-                    'name' => 'displayName',
+                    'name' => 'multiredditOwner',
                     'type' => 'String',
-                    'info' => 'A string no longer than 50 characters.',
+                    'info' => 'Username of multireddit owner.',
                     'required' => true,
                 ),
                 array (
@@ -6712,6 +6753,12 @@ return array (
                     'type' => 'String',
                     'info' => 'Name of destination multireddit.',
                     'required' => true,
+                ),
+                array (
+                    'name' => 'displayName',
+                    'type' => 'String',
+                    'info' => 'A string no longer than 50 characters.',
+                    'required' => false,
                 ),
             ),
             'callbacks' => array (
@@ -7916,7 +7963,7 @@ return array (
                     'name' => 'subreddit',
                     'type' => 'String',
                     'info' => 'Subreddit of items to retrieve. All moderated subreddits by default.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'only',
@@ -9981,7 +10028,8 @@ return array (
             'dictionary'=> array (
                 'accessToken' => 'accessToken',
                 'appClientId' => 'appClientId',
-                'multipath' => 'multipath',
+                'multireddit' => 'multipath',
+                'multiredditOwner' => 'multiredditOwner',
                 'displayName' => 'display_name',
                 'descriptionMd' => 'description_md',
                 'iconName' => 'icon_name',
@@ -9991,7 +10039,7 @@ return array (
                 'weightingScheme' => 'weighting_scheme',
                 'expandSrs' => 'expand_srs',
             ),
-            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multipath}}',
+            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multireddit}}',
             'method' => 'PUT',
             'showApiType' => false,
             'custom' => true,
@@ -10000,11 +10048,11 @@ return array (
             'dictionary'=> array (
                 'accessToken' => 'accessToken',
                 'appClientId' => 'appClientId',
-                'multipath' => 'multipath',
-                'srname' => 'srname',
-                'modelName' => 'model',
+                'multireddit' => 'multipath',
+                'multiredditOwner' => 'multiredditOwner',
+                'subredditName' => 'srname',
             ),
-            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multipath}}/r/{{srname}}',
+            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multireddit}}/r/{{subredditName}}',
             'method' => 'PUT',
             'showApiType' => false,
             'custom' => true,
@@ -10013,32 +10061,37 @@ return array (
             'dictionary'=> array (
                 'accessToken' => 'accessToken',
                 'appClientId' => 'appClientId',
-                'multipath' => 'multipath',
-                'srname' => 'srname',
+                'multireddit' => 'multipath',
+                'multiredditOwner' => 'multiredditOwner',
+                'subredditName' => 'srname',
             ),
-            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multipath}}/r/{{srname}}',
+            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multireddit}}/r/{{subredditName}}',
             'method' => 'GET',
             'showApiType' => false,
+            'custom' => true
         ),
         'multiRemoveSubreddit' => array (
             'dictionary'=> array (
                 'accessToken' => 'accessToken',
                 'appClientId' => 'appClientId',
-                'multipath' => 'multipath',
-                'srname' => 'srname',
+                'multireddit' => 'multipath',
+                'multiredditOwner' => 'multiredditOwner',
+                'subredditName' => 'srname',
             ),
-            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multipath}}/r/{{srname}}',
+            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multireddit}}/r/{{subredditName}}',
             'method' => 'DELETE',
             'showApiType' => false,
+            'custom' => true,
         ),
         'multiEditDescription' => array (
             'dictionary'=> array (
                 'accessToken' => 'accessToken',
                 'appClientId' => 'appClientId',
-                'multipath' => 'multipath',
+                'multireddit' => 'multipath',
+                'multiredditOwner' => 'multiredditOwner',
                 'modelBodyMd' => 'model_body_md',
             ),
-            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multipath}}/description',
+            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multireddit}}/description',
             'method' => 'PUT',
             'showApiType' => false,
             'custom' => true,
@@ -10085,12 +10138,14 @@ return array (
             'dictionary'=> array (
                 'accessToken' => 'accessToken',
                 'appClientId' => 'appClientId',
-                'multipath' => 'multipath',
+                'multireddit' => 'multipath',
+                'multiredditOwner' => 'multiredditOwner',
                 'expandSrs' => 'expand_srs',
             ),
-            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multipath}}',
+            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multireddit}}',
             'method' => 'GET',
             'showApiType' => false,
+            'custom' => true,
         ),
         'searchSubreddits' => array (
             'dictionary'=> array (
@@ -10125,8 +10180,8 @@ return array (
                 'subreddit' => 'subreddit',
                 'num' => 'num',
             ),
-            'vendorUrl' => 'https://oauth.reddit.com[[/r/{{subreddit}}]]/sticky.json',
-            'method' => 'GET',
+            'vendorUrl' => 'https://www.reddit.com[[/r/{{subreddit}}]]/sticky.json',
+            'method' => 'GET-NoAccess',
             'showApiType' => false,
         ),
         'leaveContributor' => array (
@@ -10143,11 +10198,13 @@ return array (
             'dictionary'=> array (
                 'accessToken' => 'accessToken',
                 'appClientId' => 'appClientId',
-                'multipath' => 'multipath',
+                'multireddit' => 'multipath',
+                'multiredditOwner' => 'multiredditOwner',
             ),
-            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multipath}}',
+            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multireddit}}',
             'method' => 'DELETE',
             'showApiType' => false,
+            'custom' => true,
         ),
         'multiGetUser' => array (
             'dictionary'=> array (
@@ -10175,12 +10232,14 @@ return array (
                 'accessToken' => 'accessToken',
                 'appClientId' => 'appClientId',
                 'displayName' => 'display_name',
+                'multiredditOwner' => 'multiredditOwner',
                 'from' => 'from',
                 'to' => 'to',
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/multi/rename',
             'method' => 'POST',
             'showApiType' => false,
+            'custom' => true,
         ),
         'unmuteUserByMessage' => array (
             'dictionary'=> array (
@@ -10273,17 +10332,18 @@ return array (
             'dictionary'=> array (
                 'accessToken' => 'accessToken',
                 'appClientId' => 'appClientId',
-                'multipath' => 'multipath',
+                'multireddit' => 'multipath',
+                'multiredditOwner' => 'multiredditOwner',
                 'displayName' => 'display_name',
                 'descriptionMd' => 'description_md',
                 'iconName' => 'icon_name',
                 'keyColor' => 'key_color',
-                'subredditsName' => 'subreddits_name',
+                'subredditsName' => 'subreddits',
                 'visibility' => 'visibility',
                 'weightingScheme' => 'weighting_scheme',
                 'expandSrs' => 'expand_srs',
             ),
-            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multipath}}',
+            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multireddit}}',
             'method' => 'POST',
             'showApiType' => false,
             'custom' => true,
@@ -10312,6 +10372,7 @@ return array (
             'dictionary'=> array (
                 'accessToken' => 'accessToken',
                 'appClientId' => 'appClientId',
+                'multiredditOwner' => 'multiredditOwner',
                 'displayName' => 'display_name',
                 'from' => 'from',
                 'to' => 'to',
@@ -10319,6 +10380,7 @@ return array (
             'vendorUrl' => 'https://oauth.reddit.com/api/multi/copy',
             'method' => 'POST',
             'showApiType' => false,
+            'custom' => true,
         ),
         'editSubreddit' => array (
             'dictionary'=> array (
@@ -10360,7 +10422,7 @@ return array (
             ),
             'vendorUrl' => 'https://oauth.reddit.com/api/site_admin',
             'method' => 'POST',
-            'showApiType' => false,
+            'showApiType' => true,
         ),
         'getDefaultSubreddits' => array (
             'dictionary'=> array (

@@ -1281,60 +1281,64 @@ Get a multi's description.
 ## Reddit.multiEdit
 Create or update a multireddit.
 
-| Field          | Type       | Description
-|----------------|------------|----------
-| appClientId    | credentials| Id of your app.
-| accessToken    | String     | Access token.
-| multipath      | String     | Multireddit url path.
-| displayName    | String     | A string no longer than 50 characters.
-| descriptionMd  | String     | Multireddit sidebar text (raw markdown text).
-| iconName       | String     | One of('art and design', 'ask', 'books', 'business', 'cars', 'comics', 'cute animals', 'diy', 'entertainment', 'food and drink', 'funny', 'games', 'grooming', 'health', 'life advice', 'military', 'models pinup', 'music', 'news', 'philosophy', 'pictures and gifs', 'science', 'shopping', 'sports', 'style', 'tech', 'travel', 'unusual stories', 'video', '', 'None').
-| keyColor       | String     | A 6 - digit rgb hex color, e.g. '#AABBCC'.
-| subredditsName | String     | Comma-separated string of subreddits name.
-| visibility     | String     | One of 'public', 'private', 'hidden'. Hidden multireddits will not be visible to you except through the API.
-| weightingScheme| String     | One of 'classic', 'fresh'.
-| expandSrs      | Boolean    | Expand subreddits.
+| Field            | Type       | Description
+|------------------|------------|----------
+| appClientId      | credentials| Id of your app.
+| accessToken      | String     | Access token.
+| multireddit      | String     | Multireddit name.
+| multiredditOwner | String     | Username of multireddit owner.
+| displayName      | String     | A string no longer than 50 characters.
+| descriptionMd    | String     | Multireddit sidebar text (raw markdown text).
+| iconName         | String     | One of('art and design', 'ask', 'books', 'business', 'cars', 'comics', 'cute animals', 'diy', 'entertainment', 'food and drink', 'funny', 'games', 'grooming', 'health', 'life advice', 'military', 'models pinup', 'music', 'news', 'philosophy', 'pictures and gifs', 'science', 'shopping', 'sports', 'style', 'tech', 'travel', 'unusual stories', 'video', '', 'None').
+| keyColor         | String     | A 6 - digit rgb hex color, e.g. '#AABBCC'.
+| subredditsName   | String     | Comma-separated string of subreddits name.
+| visibility       | String     | One of 'public', 'private', 'hidden'. Hidden multireddits will not be visible to you except through the API.
+| weightingScheme  | String     | One of 'classic', 'fresh'.
+| expandSrs        | Boolean    | Expand subreddits.
 
 ## Reddit.multiAddSubreddit
 Add the specified subreddit to the specified multireddit.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| appClientId| credentials| Id of your app.
-| accessToken| String     | Access token.
-| multipath  | String     | Multireddit url path.
-| srname     | String     | Name of subreddit to add.
-| modelName  | String     | Name of subreddit.
+| Field            | Type       | Description
+|------------------|------------|----------
+| appClientId      | credentials| Id of your app.
+| accessToken      | String     | Access token.
+| multireddit      | String     | Multireddit name.
+| multiredditOwner | String     | Username of multireddit owner.
+| subredditName    | String     | Name of subreddit to add.
 
 ## Reddit.multiGetSubreddit
 Get information about the specified subreddit in the specified multireddit.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| appClientId| credentials| Id of your app.
-| accessToken| String     | Access token.
-| multipath  | String     | Name of multireddit.
-| srname     | String     | Subreddit for which to obtain information.
+| Field            | Type       | Description
+|------------------|------------|----------
+| appClientId      | credentials| Id of your app.
+| accessToken      | String     | Access token.
+| multireddit      | String     | Multireddit name.
+| multiredditOwner | String     | Username of multireddit owner.
+| subredditName    | String     | Subreddit for which to obtain information.
 
 ## Reddit.multiRemoveSubreddit
 Remove the specified subreddit from the specified multireddit.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| appClientId| credentials| Id of your app.
-| accessToken| String     | Access token.
-| multipath  | String     | Name of multireddit.
-| srname     | String     | Name of subreddit to remove.
+| Field            | Type       | Description
+|------------------|------------|----------
+| appClientId      | credentials| Id of your app.
+| accessToken      | String     | Access token.
+| multireddit      | String     | Multireddit name.
+| multiredditOwner | String     | Username of multireddit owner.
+| subredditName    | String     | Name of subreddit to remove.
 
 ## Reddit.multiEditDescription
 Edit the description/sidebar for the specified multireddit.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| appClientId| credentials| Id of your app.
-| accessToken| String     | Access token.
-| multipath  | String     | Multireddit url path.
-| modelBodyMd| String     | New description (raw markdown text).
+| Field            | Type       | Description
+|------------------|------------|----------
+| appClientId      | credentials| Id of your app.
+| accessToken      | String     | Access token.
+| multireddit      | String     | Multireddit name.
+| multiredditOwner | String     | Username of multireddit owner.
+| modelBodyMd      | String     | New description (raw markdown text).
 
 ## Reddit.getUserOverview
 Obtain posts and comments made by the specified user.
@@ -1374,12 +1378,13 @@ Get a user's trophies.
 ## Reddit.multiGet
 Fetch a multi's data and subreddit list by name.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| appClientId| credentials| Id of your app.
-| accessToken| String     | Access token.
-| multipath  | String     | Name of multireddit to retrieve.
-| expandSrs  | Boolean    | Expand subreddits.
+| Field            | Type       | Description
+|------------------|------------|----------
+| appClientId      | credentials| Id of your app.
+| accessToken      | String     | Access token.
+| multireddit      | String     | Multireddit name.
+| multiredditOwner | String     | Username of multireddit owner.
+| expandSrs        | Boolean    | Expand subreddits.
 
 ## Reddit.searchSubreddits
 Search for subreddits by title and description.
@@ -1427,11 +1432,12 @@ Abdicate approved submitter status in a subreddit.
 ## Reddit.multiDelete
 Deletes the specified multireddit.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| appClientId| credentials| Id of your app.
-| accessToken| String     | Access token.
-| multipath  | String     | Name of multireddit to delete.
+| Field            | Type       | Description
+|------------------|------------|----------
+| appClientId      | credentials| Id of your app.
+| accessToken      | String     | Access token.
+| multireddit      | String     | Multireddit name.
+| multiredditOwner | String     | Username of multireddit owner.
 
 ## Reddit.multiGetUser
 Retrieves a list of multireddits owned by the specified user.
@@ -1455,13 +1461,14 @@ Ignores reports for the specified thing.
 ## Reddit.multiRename
 Renames a multireddit.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| appClientId| credentials| Id of your app.
-| accessToken| String     | Access token.
-| displayName| String     | A string no longer than 50 characters.
-| from       | String     | Name of multireddit to rename.
-| to         | String     | Destination name.
+| Field            | Type       | Description
+|------------------|------------|----------
+| appClientId      | credentials| Id of your app.
+| accessToken      | String     | Access token.
+| displayName      | String     | A string no longer than 50 characters.
+| multiredditOwner | String     | Username of multireddit owner.
+| from             | String     | Name of multireddit to rename.
+| to               | String     | Destination name.
 
 ## Reddit.unmuteUserByMessage
 Unmute a user from a subreddit based on the thing ID of a message they sent.
@@ -1546,19 +1553,20 @@ Retrieve a list of the current user's subscribed subreddits.
 ## Reddit.multiCreate
 Create a multi. Responds with 409 Conflict if it already exists.
 
-| Field          | Type       | Description
-|----------------|------------|----------
-| appClientId    | credentials| Id of your app.
-| accessToken    | String     | Access token.
-| multipath      | String     | Multireddit url path.
-| displayName    | String     | A string no longer than 50 characters.
-| descriptionMd  | String     | Multireddit sidebar text (raw markdown text).
-| iconName       | String     | One of('art and design', 'ask', 'books', 'business', 'cars', 'comics', 'cute animals', 'diy', 'entertainment', 'food and drink', 'funny', 'games', 'grooming', 'health', 'life advice', 'military', 'models pinup', 'music', 'news', 'philosophy', 'pictures and gifs', 'science', 'shopping', 'sports', 'style', 'tech', 'travel', 'unusual stories', 'video', '', 'None').
-| keyColor       | String     | A 6 - digit rgb hex color, e.g. '#AABBCC'.
-| subredditsName | String     | Comma-separated string of subreddits name.
-| visibility     | String     | One of 'public', 'private', 'hidden'. Hidden multireddits will not be visible to you except through the API.
-| weightingScheme| String     | One of 'classic', 'fresh'.
-| expandSrs      | Boolean    | Expand subreddits.
+| Field            | Type       | Description
+|------------------|------------|----------
+| appClientId      | credentials| Id of your app.
+| accessToken      | String     | Access token.
+| multireddit      | String     | Multireddit name.
+| multiredditOwner | String     | Username of multireddit owner.
+| displayName      | String     | A string no longer than 50 characters.
+| descriptionMd    | String     | Multireddit sidebar text (raw markdown text).
+| iconName         | String     | One of('art and design', 'ask', 'books', 'business', 'cars', 'comics', 'cute animals', 'diy', 'entertainment', 'food and drink', 'funny', 'games', 'grooming', 'health', 'life advice', 'military', 'models pinup', 'music', 'news', 'philosophy', 'pictures and gifs', 'science', 'shopping', 'sports', 'style', 'tech', 'travel', 'unusual stories', 'video', '', 'None').
+| keyColor         | String     | A 6 - digit rgb hex color, e.g. '#AABBCC'.
+| subredditsName   | String     | Comma-separated string of subreddits name.
+| visibility       | String     | One of 'public', 'private', 'hidden'. Hidden multireddits will not be visible to you except through the API.
+| weightingScheme  | String     | One of 'classic', 'fresh'.
+| expandSrs        | Boolean    | Expand subreddits.
 
 ## Reddit.muteUserByMessage
 Mute a user from a subreddit based on the thing ID of a message they sent.
@@ -1581,13 +1589,14 @@ Retrieves a list of multireddits that are owned by the current user.
 ## Reddit.multiCopy
 Copy an existing multireddit to your own set.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| appClientId| credentials| Id of your app.
-| accessToken| String     | Access token.
-| displayName| String     | A string no longer than 50 characters.
-| from       | String     | Name of multireddit to copy.
-| to         | String     | Name of destination multireddit.
+| Field            | Type       | Description
+|------------------|------------|----------
+| appClientId      | credentials| Id of your app.
+| accessToken      | String     | Access token.
+| multiredditOwner | String     | Username of multireddit owner.
+| from             | String     | Name of multireddit to copy.
+| to               | String     | Name of destination multireddit.
+| displayName      | String     | A string no longer than 50 characters.
 
 ## Reddit.editSubreddit
 Change a subreddit's configuration.
