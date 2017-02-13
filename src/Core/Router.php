@@ -99,7 +99,7 @@ class Router
             // Put param in Vendor Url if it need
             $vendorUrl = $blockCustom['vendorUrl'];
             if(strpos($vendorUrl, '[[/r/{{subreddit}}]]')){
-                $replacement = (isset($inputPram['subreddit']))?'/r/' . $inputPram['subreddit']:'';
+                $replacement = (isset($inputPram['subreddit'])&&strlen($inputPram['subreddit'])>0)?'/r/' . $inputPram['subreddit']:'';
                 $vendorUrl = str_replace('[[/r/{{subreddit}}]]', $replacement, $vendorUrl);
             }
             $urlPart = [];
