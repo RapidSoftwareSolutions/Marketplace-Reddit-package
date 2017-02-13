@@ -298,6 +298,10 @@ class Router
             $vendorResponse = $this->http->request($method, $url, $clientSetup);
             $responseBody = $vendorResponse->getBody()->getContents();
 
+            if($responseBody === 'true'||$responseBody==='false'){
+                $responseBody = json_encode($responseBody);
+            }
+
             $result['callback'] = 'success';
             if(empty(json_decode($responseBody))&&strlen($responseBody)==0) {
                 $result['contextWrites']['to'] = 'success' . $responseBody;
