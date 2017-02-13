@@ -10086,7 +10086,7 @@ return array (
                 'multiredditOwner' => 'multiredditOwner',
                 'subredditName' => 'srname',
             ),
-            'vendorUrl' => 'https://oauth.reddit.com/api/multi/{{multireddit}}/r/{{subredditName}}',
+            'vendorUrl' => 'https://oauth.reddit.com/api/multi/user/{{multiredditOwner}}/m/{{multireddit}}/r/{{subredditName}}',
             'method' => 'DELETE',
             'showApiType' => false,
             'custom' => true,
