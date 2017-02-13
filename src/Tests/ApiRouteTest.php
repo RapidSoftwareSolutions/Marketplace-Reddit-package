@@ -17,7 +17,7 @@ class ApiRouteTest extends \PHPUnit_Framework_TestCase
         define( 'INDEX_PATH', '/' );
 
         // Include metadata array
-        $this->settings = include_once dirname(__DIR__) . '/metadata/metadata.php';
+        $this->settings = include_once dirname(__DIR__) . '/metadata/vendor.php';
         // Init Router Class
         include_once dirname(__DIR__) . '/Core/Router.php';
         $this->router = new \Core\Router($this->settings['package'], $this->settings['blocks'], $this->settings['custom']);

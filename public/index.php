@@ -17,7 +17,7 @@ define('APP_PATH', __DIR__);
 define('HTTP_HOST', $_SERVER['HTTP_HOST']);
 
 // Include metadata array
-$settings = include dirname(APP_PATH) . '/src/metadata/metadata.php';
+$settings = include dirname(APP_PATH) . '/src/metadata/vendor.php';
 
 if(
     !isset($settings['package']) ||
@@ -25,7 +25,7 @@ if(
     !is_array($settings['blocks']) ||
     !isset($settings['custom'])
 ){
-    throw new Exception('Wrong metadata.php format \'package\', \'blocks\' or \'customBlocksHandlers\' in root is miss');
+    throw new Exception('Wrong vendor.php format \'package\', \'blocks\' or \'customBlocksHandlers\' in root is miss');
 }
 $router = new Router($settings['package'], $settings['blocks'], $settings['custom']);
 $router->setup();
