@@ -498,7 +498,7 @@ Retrieves a listing of comments and children for a link and optionally a specifi
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
 | subreddit  | String     | Subreddit in which to assign comments.
-| article    | String     | ID36 or fullname of link for comments to fetch.
+| article    | String     | ID of link, without prefix, for comments fetch.
 | comment    | String     | Optional, ID36 or fullname of a single comment to fetch with children, much like permalink.
 | context    | Number     | Number of levels up of parent comments to retrieve. Only applicable to child comments (between 0 and 8).
 | depth      | Number     | Depth of child comments to retrieve.
@@ -515,7 +515,7 @@ Retrieves the specified link and a listing of other links that are to duplicate 
 |------------|------------|----------
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
-| article    | String     | ID36 or fullname of link to check for duplicates.
+| article    | String     | ID of link, without prefix, to check for duplicates.
 | after      | String     | Get items lower on list than this entry. Does not mean chronologically.
 | before     | String     | Get items higher on list than this entry. Does not mean chronologically.
 | limit      | Number     | Limit of duplicate links to retrieve (default: 25, maximum: 100).

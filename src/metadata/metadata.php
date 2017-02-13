@@ -1943,7 +1943,7 @@ return array (
                 array (
                     'name' => 'article',
                     'type' => 'String',
-                    'info' => 'ID36 or fullname of link for comments to fetch.',
+                    'info' => 'ID of link, without prefix, for comments fetch.',
                     'required' => true,
                 ),
                 array (
@@ -2025,7 +2025,7 @@ return array (
                 array (
                     'name' => 'article',
                     'type' => 'String',
-                    'info' => 'ID36 or fullname of link to check for duplicates.',
+                    'info' => 'ID of link, without prefix, to check for duplicates.',
                     'required' => true,
                 ),
                 array (
