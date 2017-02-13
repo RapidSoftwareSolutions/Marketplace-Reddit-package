@@ -2096,7 +2096,7 @@ return array (
                     'name' => 'subreddit',
                     'type' => 'String',
                     'info' => 'Subreddit of listing to retrieve. If none, defaults to front page.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'after',
@@ -2172,7 +2172,7 @@ return array (
                     'name' => 'subreddit',
                     'type' => 'String',
                     'info' => 'Subreddit of listing to retrieve. If none, defaults to front page.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 't',
@@ -2248,7 +2248,7 @@ return array (
                     'name' => 'subreddit',
                     'type' => 'String',
                     'info' => 'Subreddit of listing to retrieve. If none, defaults to front page.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'after',
@@ -2312,7 +2312,7 @@ return array (
                     'name' => 'subreddit',
                     'type' => 'String',
                     'info' => 'Subreddit from which to retrieve a random link.',
-                    'required' => false,
+                    'required' => true,
                 ),
             ),
             'callbacks'=> array (
@@ -2346,7 +2346,7 @@ return array (
                     'name' => 'subreddit',
                     'type' => 'String',
                     'info' => 'Subreddit of listing to retrieve. If none, defaults to front page.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 't',
@@ -2416,7 +2416,7 @@ return array (
                     'name' => 'subreddit',
                     'type' => 'String',
                     'info' => 'Subreddit of listing to retrieve. If none, defaults to front page.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'after',
@@ -3544,7 +3544,7 @@ return array (
                     'name' => 'mark',
                     'type' => 'Boolean',
                     'info' => 'One of (true, false).',
-                    'required' => true,
+                    'required' => false,
                 ),
                 array (
                     'name' => 'after',
@@ -3608,7 +3608,7 @@ return array (
                     'name' => 'mark',
                     'type' => 'Boolean',
                     'info' => 'One of (true, false).',
-                    'required' => true,
+                    'required' => false,
                 ),
                 array (
                     'name' => 'after',
@@ -3672,7 +3672,7 @@ return array (
                     'name' => 'mark',
                     'type' => 'Boolean',
                     'info' => 'One of (true, false).',
-                    'required' => true,
+                    'required' => false,
                 ),
                 array (
                     'name' => 'after',

@@ -2099,7 +2099,7 @@
           "name": "subreddit",
           "type": "String",
           "info": "Subreddit of listing to retrieve. If none, defaults to front page.",
-          "required": false
+          "required": true
         },
         {
           "name": "after",
@@ -2169,7 +2169,7 @@
           "name": "subreddit",
           "type": "String",
           "info": "Subreddit of listing to retrieve. If none, defaults to front page.",
-          "required": false
+          "required": true
         },
         {
           "name": "t",
@@ -2245,7 +2245,7 @@
           "name": "subreddit",
           "type": "String",
           "info": "Subreddit of listing to retrieve. If none, defaults to front page.",
-          "required": false
+          "required": true
         },
         {
           "name": "after",
@@ -2309,7 +2309,7 @@
           "name": "subreddit",
           "type": "String",
           "info": "Subreddit from which to retrieve a random link.",
-          "required": false
+          "required": true
         }
       ],
       "callbacks": [
@@ -2343,7 +2343,7 @@
           "name": "subreddit",
           "type": "String",
           "info": "Subreddit of listing to retrieve. If none, defaults to front page.",
-          "required": false
+          "required": true
         },
         {
           "name": "t",
@@ -2413,7 +2413,7 @@
           "name": "subreddit",
           "type": "String",
           "info": "Subreddit of listing to retrieve. If none, defaults to front page.",
-          "required": false
+          "required": true
         },
         {
           "name": "after",
@@ -3541,7 +3541,7 @@
           "name": "mark",
           "type": "Boolean",
           "info": "One of (true, false).",
-          "required": true
+          "required": false
         },
         {
           "name": "after",
@@ -3605,7 +3605,7 @@
           "name": "mark",
           "type": "Boolean",
           "info": "One of (true, false).",
-          "required": true
+          "required": false
         },
         {
           "name": "after",
@@ -3669,7 +3669,7 @@
           "name": "mark",
           "type": "Boolean",
           "info": "One of (true, false).",
-          "required": true
+          "required": false
         },
         {
           "name": "after",
