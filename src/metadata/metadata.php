@@ -638,7 +638,7 @@ return array (
                     'name' => 'name',
                     'type' => 'String',
                     'info' => 'A user by name.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'limit',
@@ -932,7 +932,7 @@ return array (
                     'name' => 'months',
                     'type' => 'Number',
                     'info' => 'Number of months to give reddit gold (between 1 and 36).',
-                    'required' => false,
+                    'required' => true,
                 ),
             ),
             'callbacks'=> array (
@@ -1541,7 +1541,7 @@ return array (
             ),
         ),
         array (
-            'name' => 'submitLinkPost',
+            'name' => 'createPost',
             'description' => 'Submits a new link post.',
             'args'=> array (
                 array (
@@ -9071,7 +9071,7 @@ return array (
             'method' => 'POST',
             'showApiType' => true,
         ),
-        'submitLinkPost'=> array (
+        'createPost'=> array (
             'dictionary'=> array (
                 'accessToken' => 'accessToken',
                 'appClientId' => 'appClientId',

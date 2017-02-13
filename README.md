@@ -397,8 +397,8 @@ Sets the default sort of a link's comments.
 | thing      | String     | Thing ID of link to set suggested sort.
 | sort       | String     | Sort method. One of: 'confidence', 'top', 'new', 'hot', 'controversial', 'old', 'random', 'qa'
 
-## Reddit.submitLinkPost
-Submits a new link post.
+## Reddit.createPost
+Create new post.
 
 | Field               | Type       | Description
 |---------------------|------------|----------

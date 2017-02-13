@@ -641,7 +641,7 @@
           "name": "name",
           "type": "String",
           "info": "A user by name.",
-          "required": false
+          "required": true
         },
         {
           "name": "limit",
@@ -935,7 +935,7 @@
           "name": "months",
           "type": "Number",
           "info": "Number of months to give reddit gold (between 1 and 36).",
-          "required": false
+          "required": true
         }
       ],
       "callbacks": [
@@ -1544,8 +1544,8 @@
       ]
     },
     {
-      "name": "submitLinkPost",
-      "description": "Submits a new link post.",
+      "name": "createPost",
+      "description": "Create new post.",
       "args": [
         {
           "name": "appClientId",
