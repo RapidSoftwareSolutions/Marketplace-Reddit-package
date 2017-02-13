@@ -302,6 +302,10 @@ class Router
                 $responseBody = json_encode($responseBody);
             }
 
+            if($responseBody === '{"json": {"errors": []}}'){
+                $responseBody = json_encode('success');
+            }
+
             $result['callback'] = 'success';
             if(empty(json_decode($responseBody))&&strlen($responseBody)==0) {
                 $result['contextWrites']['to'] = 'success' . $responseBody;
