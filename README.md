@@ -1,3 +1,5 @@
+[![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/Reddit/functions?utm_source=RapidAPIGitHub_RedditFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)
+
 # Reddit Package
 Reddit is a social news aggregation, web content rating, and discussion website.
 * Domain: reddit.com
