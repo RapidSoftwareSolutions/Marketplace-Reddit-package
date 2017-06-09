@@ -132,6 +132,12 @@ class CustomModel
             $result['model'] = '{}';
         }
 
+        if (!empty($param['subredditsName'])) {
+            if (is_array($param['subredditsName'])) {
+                $param['subredditsName'] = implode(',', $param['subredditsName']);
+            }
+        }
+
         return json_encode($result);
     }
 
@@ -227,5 +233,92 @@ class CustomModel
         $param['action'] = 'unsub';
 
         return json_encode($param);
+    }
+
+    public static function hidePost($param, $blockCustom, $vendorUrl) {
+        if (is_array($param['id'])) {
+            $param['id'] = implode(',', $param['id']);
+        }
+        return $param;
+    }
+
+    public static function unhidePost($param, $blockCustom, $vendorUrl) {
+        if (is_array($param['id'])) {
+            $param['id'] = implode(',', $param['id']);
+        }
+        return $param;
+    }
+
+    public static function getInfo($param, $blockCustom, $vendorUrl) {
+        if (is_array($param['id'])) {
+            $param['id'] = implode(',', $param['id']);
+        }
+        return $param;
+    }
+
+    public static function getCommentChildren($param, $blockCustom, $vendorUrl) {
+        if (is_array($param['children'])) {
+            $param['children'] = implode(',', $param['children']);
+        }
+        return $param;
+    }
+
+    public static function getLinksById($param, $blockCustom, $vendorUrl) {
+        if (is_array($param['names'])) {
+            $param['names'] = implode(',', $param['names']);
+        }
+        return $param;
+    }
+
+    public static function getLiveThread($param, $blockCustom, $vendorUrl) {
+        if (is_array($param['names'])) {
+            $param['names'] = implode(',', $param['names']);
+        }
+        return $param;
+    }
+
+    public static function collapseMessage($param, $blockCustom, $vendorUrl) {
+        if (is_array($param['id'])) {
+            $param['id'] = implode(',', $param['id']);
+        }
+        return $param;
+    }
+
+    public static function markMessageRead($param, $blockCustom, $vendorUrl) {
+        if (is_array($param['id'])) {
+            $param['id'] = implode(',', $param['id']);
+        }
+        return $param;
+    }
+
+    public static function uncollapseMessage($param, $blockCustom, $vendorUrl) {
+        if (is_array($param['id'])) {
+            $param['id'] = implode(',', $param['id']);
+        }
+        return $param;
+    }
+
+    public static function markMessageUnread($param, $blockCustom, $vendorUrl) {
+        if (is_array($param['id'])) {
+            $param['id'] = implode(',', $param['id']);
+        }
+        return $param;
+    }
+
+    public static function getRecommendedSubreddits($param, $blockCustom, $vendorUrl) {
+        if (is_array($param['srnames'])) {
+            $param['srnames'] = implode(',', $param['srnames']);
+        }
+        if (!empty($param['omit']) && is_array($param['omit'])) {
+            $param['omit'] = implode(',', $param['omit']);
+        }
+        return $param;
+    }
+
+    public static function search($param, $blockCustom, $vendorUrl) {
+        if (!empty($param['type']) && is_array($param['type'])) {
+            $param['type'] = implode(',', $param['type']);
+        }
+        return $param;
     }
 }

@@ -8948,6 +8948,7 @@ return array (
             'vendorUrl' => 'https://oauth.reddit.com/api/hide',
             'method' => 'POST',
             'showApiType' => false,
+            'custom' => true
         ),
         'getInfo'=> array (
             'dictionary'=> array (
@@ -8959,6 +8960,7 @@ return array (
             'vendorUrl' => 'https://oauth.reddit.com/api/info',
             'method' => 'GET',
             'showApiType' => false,
+            'custom' => true
         ),
         'lockThread'=> array (
             'dictionary'=> array (
@@ -8992,6 +8994,7 @@ return array (
             'vendorUrl' => 'https://oauth.reddit.com/api/morechildren',
             'method' => 'GET',
             'showApiType' => true,
+            'custom' => true
         ),
         'report'=> array (
             'dictionary'=> array (
@@ -9099,6 +9102,7 @@ return array (
             'vendorUrl' => 'https://oauth.reddit.com/api/unhide',
             'method' => 'POST',
             'showApiType' => false,
+            'custom' => true
         ),
         'unlockThread'=> array (
             'dictionary'=> array (
@@ -9175,6 +9179,7 @@ return array (
             'vendorUrl' => 'https://oauth.reddit.com/by_id/{{names}}',
             'method' => 'GET',
             'showApiType' => false,
+            'custom' => true
         ),
         'getComments'=> array (
             'dictionary'=> array (
@@ -9318,6 +9323,7 @@ return array (
             'vendorUrl' => 'https://oauth.reddit.com/api/live/by_id/{{names}}',
             'method' => 'GET',
             'showApiType' => false,
+            'custom' => true
         ),
         'createLiveThread'=> array (
             'dictionary'=> array (
@@ -9516,6 +9522,7 @@ return array (
             'vendorUrl' => 'https://oauth.reddit.com/api/collapse_message',
             'method' => 'POST',
             'showApiType' => false,
+            'custom' => true
         ),
         'composeMessage'=> array (
             'dictionary'=> array (
@@ -9559,6 +9566,7 @@ return array (
             'vendorUrl' => 'https://oauth.reddit.com/api/read_message',
             'method' => 'POST',
             'showApiType' => false,
+            'custom' => true
         ),
         'unblockSubredditByMessage'=> array (
             'dictionary'=> array (
@@ -9579,6 +9587,7 @@ return array (
             'vendorUrl' => 'https://oauth.reddit.com/api/uncollapse_message',
             'method' => 'POST',
             'showApiType' => false,
+            'custom' => true
         ),
         'markMessageUnread'=> array (
             'dictionary'=> array (
@@ -9589,6 +9598,7 @@ return array (
             'vendorUrl' => 'https://oauth.reddit.com/api/unread_message',
             'method' => 'POST',
             'showApiType' => false,
+            'custom' => true
         ),
         'getInbox'=> array (
             'dictionary'=> array (
@@ -9803,6 +9813,7 @@ return array (
             'vendorUrl' => 'https://oauth.reddit.com/api/recommend/sr/{{srnames}}.json',
             'method' => 'GET',
             'showApiType' => false,
+            'custom' => true
         ),
         'deleteSubredditImage' => array (
             'dictionary'=> array (
@@ -10011,6 +10022,7 @@ return array (
             'vendorUrl' => 'https://oauth.reddit.com[[/r/{{subreddit}}]]/search',
             'method' => 'GET',
             'showApiType' => false,
+            'custom' => true
         ),
         'usernameAvailable' => array (
             'dictionary'=> array (
@@ -10834,6 +10846,6 @@ return array (
             'vendorUrl' => 'https://oauth.reddit.com[[/r/{{subreddit}}]]/wiki/settings/{{page}}',
             'method' => 'POST',
             'showApiType' => false,
-        ),
+        )
     ),
 );

@@ -117,7 +117,8 @@
         },
         {
           "name": "tokenTypeHint",
-          "type": "String",
+          "type": "Select",
+          "options": ["refresh_token", "access_token"],
           "info": "The type of token being revoked (refresh_token or access_token).",
           "required": false
         }
@@ -397,7 +398,8 @@
         },
         {
           "name": "flairType",
-          "type": "String",
+          "type": "Select",
+          "options": ["USER_FLAIR", "LINK_FLAIR"],
           "info": "One of (USER_FLAIR, LINK_FLAIR).",
           "required": true
         }
@@ -581,7 +583,8 @@
         },
         {
           "name": "flairPosition",
-          "type": "String",
+          "type": "Select",
+          "options": ["left", "right"],
           "info": "On which side to display user flair. One of 'left' or 'right'.",
           "required": true
         },
@@ -593,7 +596,8 @@
         },
         {
           "name": "linkFlairPosition",
-          "type": "String",
+          "type": "Select",
+          "options": ["left", "right", "none"],
           "info": "On which side to display links' flair. One of 'left', 'right', or 'none'.",
           "required": true
         },
@@ -1081,9 +1085,15 @@
         },
         {
           "name": "id",
-          "type": "String",
-          "info": "A comma-separated list of link fullnames.",
-          "required": true
+          "type": "List",
+          "info": "List of link fullnames.",
+          "required": true,
+          "structure": {
+            "name": "id",
+            "type": "String",
+            "info": "Id",
+            "required": true
+          }
         }
       ],
       "callbacks": [
@@ -1115,9 +1125,15 @@
         },
         {
           "name": "id",
-          "type": "String",
-          "info": "A comma-separated list of thing.",
-          "required": true
+          "type": "List",
+          "info": "List of thing.",
+          "required": true,
+          "structure": {
+            "name": "id",
+            "type": "String",
+            "info": "ID",
+            "required": true
+          }
         },
         {
           "name": "url",
@@ -1229,13 +1245,20 @@
         },
         {
           "name": "children",
-          "type": "String",
-          "info": "A comma-delimited list of comment ID36s for which to retrieve children.",
-          "required": true
+          "type": "List",
+          "info": "List of comment ID36s for which to retrieve children.",
+          "required": true,
+          "structure": {
+            "name": "id",
+            "type": "String",
+            "info": "ID",
+            "required": true
+          }
         },
         {
           "name": "sort",
-          "type": "String",
+          "type": "Select",
+          "options": ["confidence", "top", "new", "controversial", "old", "random", "qa", "live"],
           "info": "One of (confidence, top, new, controversial, old, random, qa, live).",
           "required": false
         },
@@ -1481,7 +1504,8 @@
         },
         {
           "name": "num",
-          "type": "Number",
+          "type": "Select",
+          "options": ["1", "2"],
           "info": "Position of new sticky. 1 for top, 2 for bottom. Defaults to 2.",
           "required": false
         },
@@ -1527,7 +1551,8 @@
         },
         {
           "name": "sort",
-          "type": "String",
+          "type": "Select",
+          "options": ["confidence", "top", "new", "hot", "controversial", "old", "random", "qa"],
           "info": "Sort method. One of: 'confidence', 'top', 'new', 'hot', 'controversial', 'old', 'random', 'qa'",
           "required": true
         }
@@ -1591,7 +1616,8 @@
         },
         {
           "name": "kind",
-          "type": "String",
+          "type": "Select",
+          "options": ["link", "self", "image"],
           "info": "One of (link, self, image).",
           "required": false
         },
@@ -1649,9 +1675,15 @@
         },
         {
           "name": "id",
-          "type": "String",
-          "info": "A comma-separated list of link fullnames to unhide.",
-          "required": true
+          "type": "List",
+          "info": "List of link fullnames to unhide.",
+          "required": true,
+          "structure": {
+            "name": "id",
+            "type": "String",
+            "info": "ID",
+            "required": true
+          }
         }
       ],
       "callbacks": [
@@ -1905,9 +1937,15 @@
         },
         {
           "name": "names",
-          "type": "String",
-          "info": "A comma-separated list thing ID's of links to retrieve.",
-          "required": true
+          "type": "List",
+          "info": "List thing ID's of links to retrieve.",
+          "required": true,
+          "structure": {
+            "name": "name",
+            "type": "String",
+            "info": "Name",
+            "required": true
+          }
         }
       ],
       "callbacks": [
@@ -1975,7 +2013,8 @@
         },
         {
           "name": "sort",
-          "type": "String",
+          "type": "Select",
+          "options": ["confidence", "top", "new", "hot", "controversial", "old", "random", "qa"],
           "info": "How to sort the comments, one of 'confidence', 'top', 'new', 'hot', 'controversial', 'old', 'random', 'qa'",
           "required": false
         },
@@ -2173,7 +2212,8 @@
         },
         {
           "name": "t",
-          "type": "String",
+          "type": "Select",
+          "options": ["hour", "day", "week", "month", "year", "all"],
           "info": "Time constraint for age of items on list. One of hour, day, week, month, year, all.",
           "required": false
         },
@@ -2347,7 +2387,8 @@
         },
         {
           "name": "t",
-          "type": "String",
+          "type": "Select",
+          "options": ["hour", "day", "week", "month", "year", "all"],
           "info": "Time constraint for age of items on list. One of 'hour', 'day', 'week', 'month', 'year', 'all'.",
           "required": false
         },
@@ -2503,9 +2544,15 @@
         },
         {
           "name": "names",
-          "type": "String",
-          "info": "A comma-separated list of ids.",
-          "required": true
+          "type": "List",
+          "info": "List of ids.",
+          "required": true,
+          "structure": {
+            "name": "name",
+            "type": "String",
+            "info": "Name",
+            "required": true
+          }
         }
       ],
       "callbacks": [
@@ -2801,7 +2848,8 @@
         },
         {
           "name": "type",
-          "type": "String",
+          "type": "Select",
+          "options": ["liveupdate_contributor_invite", "liveupdate_contributor"],
           "info": "One of (liveupdate_contributor_invite, liveupdate_contributor).",
           "required": true
         }
@@ -2875,7 +2923,8 @@
         },
         {
           "name": "type",
-          "type": "String",
+          "type": "Select",
+          "options": ["spam", "vote-manipulation", "personal-information", "sexualizing-minors", "site-breaking"],
           "info": "One of (spam, vote-manipulation, personal-information, sexualizing-minors, site-breaking).",
           "required": true
         }
@@ -3007,7 +3056,8 @@
         },
         {
           "name": "type",
-          "type": "String",
+          "type": "Select",
+          "options": ["liveupdate_contributor_invite", "liveupdate_contributor"],
           "info": "One of (liveupdate_contributor_invite, liveupdate_contributor).",
           "required": true
         }
@@ -3249,9 +3299,15 @@
         },
         {
           "name": "id",
-          "type": "String",
-          "info": "Comma-separated thing ID's of messages to collapse.",
-          "required": true
+          "type": "List",
+          "info": "List thing ID's of messages to collapse.",
+          "required": true,
+          "structure": {
+            "name": "id",
+            "type": "String",
+            "info": "ID",
+            "required": true
+          }
         }
       ],
       "callbacks": [
@@ -3403,9 +3459,15 @@
         },
         {
           "name": "id",
-          "type": "String",
-          "info": "A comma-separated string of one or more message thing ID's (t4_).",
-          "required": true
+          "type": "List",
+          "info": "List string of one or more message thing ID's (t4_).",
+          "required": true,
+          "structure": {
+            "name": "id",
+            "type": "String",
+            "info": "ID",
+            "required": true
+          }
         }
       ],
       "callbacks": [
@@ -3471,9 +3533,15 @@
         },
         {
           "name": "id",
-          "type": "String",
-          "info": "Comma-separated thing ID's of messages to uncollapse.",
-          "required": true
+          "type": "List",
+          "info": "List thing ID's of messages to uncollapse.",
+          "required": true,
+          "structure": {
+            "name": "id",
+            "type": "String",
+            "info": "ID",
+            "required": true
+          }
         }
       ],
       "callbacks": [
@@ -3505,9 +3573,15 @@
         },
         {
           "name": "id",
-          "type": "String",
-          "info": "A comma-separated string of one or more message thing ID's (t4_).",
-          "required": true
+          "type": "List",
+          "info": "List strings of one or more message thing ID's (t4_).",
+          "required": true,
+          "structure": {
+            "name": "id",
+            "type": "String",
+            "info": "ID",
+            "required": true
+          }
         }
       ],
       "callbacks": [
@@ -3743,13 +3817,15 @@
         },
         {
           "name": "sort",
-          "type": "String",
+          "type": "Select",
+          "options": ["hot", "new", "top", "controversial"],
           "info": "One of (hot, new, top, controversial).",
           "required": false
         },
         {
           "name": "t",
-          "type": "String",
+          "type": "Select",
+          "options": ["hour", "day", "week", "month", "year", "all"],
           "info": "One of (hour, day, week, month, year, all).",
           "required": false
         },
@@ -3825,13 +3901,15 @@
         },
         {
           "name": "sort",
-          "type": "String",
+          "type": "Select",
+          "options": ["hot", "new", "top", "controversial"],
           "info": "One of (hot, new, top, controversial).",
           "required": false
         },
         {
           "name": "t",
-          "type": "String",
+          "type": "Select",
+          "options": ["hour", "day", "week", "month", "year", "all"],
           "info": "One of (hour, day, week, month, year, all).",
           "required": false
         },
@@ -3907,13 +3985,15 @@
         },
         {
           "name": "sort",
-          "type": "String",
+          "type": "Select",
+          "options": ["hot", "new", "top", "controversial"],
           "info": "One of (hot, new, top, controversial).",
           "required": false
         },
         {
           "name": "t",
-          "type": "String",
+          "type": "Select",
+          "options": ["hour", "day", "week", "month", "year", "all"],
           "info": "One of (hour, day, week, month, year, all).",
           "required": false
         },
@@ -3989,13 +4069,15 @@
         },
         {
           "name": "sort",
-          "type": "String",
+          "type": "Select",
+          "options": ["hot", "new", "top", "controversial"],
           "info": "One of (hot, new, top, controversial).",
           "required": false
         },
         {
           "name": "t",
-          "type": "String",
+          "type": "Select",
+          "options": ["hour", "day", "week", "month", "year", "all"],
           "info": "One of (hour, day, week, month, year, all).",
           "required": false
         },
@@ -4071,13 +4153,15 @@
         },
         {
           "name": "sort",
-          "type": "String",
+          "type": "Select",
+          "options": ["hot", "new", "top", "controversial"],
           "info": "One of (hot, new, top, controversial).",
           "required": false
         },
         {
           "name": "t",
-          "type": "String",
+          "type": "Select",
+          "options": ["hour", "day", "week", "month", "year", "all"],
           "info": "One of (hour, day, week, month, year, all).",
           "required": false
         },
@@ -4153,13 +4237,15 @@
         },
         {
           "name": "sort",
-          "type": "String",
+          "type": "Select",
+          "options": ["hot", "new", "top", "controversial"],
           "info": "One of (hot, new, top, controversial).",
           "required": false
         },
         {
           "name": "t",
-          "type": "String",
+          "type": "Select",
+          "options": ["hour", "day", "week", "month", "year", "all"],
           "info": "One of (hour, day, week, month, year, all).",
           "required": false
         },
@@ -4235,13 +4321,15 @@
         },
         {
           "name": "sort",
-          "type": "String",
+          "type": "Select",
+          "options": ["hot", "new", "top", "controversial"],
           "info": "One of (hot, new, top, controversial).",
           "required": false
         },
         {
           "name": "t",
-          "type": "String",
+          "type": "Select",
+          "options": ["hour", "day", "week", "month", "year", "all"],
           "info": "One of (hour, day, week, month, year, all).",
           "required": false
         },
@@ -4317,13 +4405,15 @@
         },
         {
           "name": "sort",
-          "type": "String",
+          "type": "Select",
+          "options": ["hot", "new", "top", "controversial"],
           "info": "One of (hot, new, top, controversial).",
           "required": false
         },
         {
           "name": "t",
-          "type": "String",
+          "type": "Select",
+          "options": ["hour", "day", "week", "month", "year", "all"],
           "info": "One of (hour, day, week, month, year, all).",
           "required": false
         },
@@ -4439,15 +4529,27 @@
         },
         {
           "name": "srnames",
-          "type": "String",
-          "info": "Comma-delimited list of subreddits on which to base recommendations.",
-          "required": true
+          "type": "List",
+          "info": "List of subreddits on which to base recommendations.",
+          "required": true,
+          "structure": {
+            "name": "srname",
+            "type": "String",
+            "info": "SrName",
+            "required": true
+          }
         },
         {
           "name": "omit",
-          "type": "String",
+          "type": "List",
           "info": "Omit these specific subreddits from results (comma-delimited list of subreddit names).",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "omit",
+            "type": "String",
+            "info": "Omit",
+            "required": false
+          }
         },
         {
           "name": "over18",
@@ -5237,21 +5339,29 @@
         },
         {
           "name": "sort",
-          "type": "String",
+          "type": "Select",
+          "options": ["relevance", "hot", "top", "new", "comments"],
           "info": "Sort results by one of 'relevance', 'hot', 'top', 'new', 'comments'. Defaults to 'relevance'.",
           "required": false
         },
         {
           "name": "t",
-          "type": "String",
+          "type": "Select",
+          "options": ["hour", "day", "week", "month", "year", "all"],
           "info": "One of 'hour', 'day', 'week', 'month', 'year', 'all'. Defaults to all.",
           "required": false
         },
         {
           "name": "type",
-          "type": "String",
-          "info": "Comma-delimited list of result types: 'sr', 'link', or null.",
-          "required": false
+          "type": "List",
+          "info": "List of result types: 'sr', 'link', or null.",
+          "required": false,
+          "structure": {
+            "name": "type",
+            "type": "String",
+            "info": "Type",
+            "required": false
+          }
         },
         {
           "name": "includeFacets",
@@ -5267,7 +5377,8 @@
         },
         {
           "name": "syntax",
-          "type": "String",
+          "type": "Select",
+          "options": ["cloudsearch", "lucene", "plain"],
           "info": "One of (cloudsearch, lucene, plain).",
           "required": false
         },
@@ -5417,7 +5528,8 @@
         },
         {
           "name": "iconName",
-          "type": "String",
+          "type": "Select",
+          "options": ["art and design", "ask", "books", "business", "cars", "comics", "cute animals", "diy", "entertainment", "food and drink", "funny", "games", "grooming", "health", "life advice", "military", "models pinup", "music", "news", "philosophy", "pictures and gifs", "science", "shopping", "sports", "style", "tech", "travel", "unusual stories", "video", "None"],
           "info": "One of('art and design', 'ask', 'books', 'business', 'cars', 'comics', 'cute animals', 'diy', 'entertainment', 'food and drink', 'funny', 'games', 'grooming', 'health', 'life advice', 'military', 'models pinup', 'music', 'news', 'philosophy', 'pictures and gifs', 'science', 'shopping', 'sports', 'style', 'tech', 'travel', 'unusual stories', 'video', '', 'None').",
           "required": false
         },
@@ -5429,19 +5541,27 @@
         },
         {
           "name": "subredditsName",
-          "type": "String",
-          "info": "Comma-separated string of subreddits name.",
-          "required": false
+          "type": "List",
+          "info": "List string of subreddits name.",
+          "required": false,
+          "structure": {
+            "name": "name",
+            "type": "String",
+            "info": "Subreddits name",
+            "required": false
+          }
         },
         {
           "name": "visibility",
-          "type": "String",
+          "type": "Select",
+          "options": ["public", "private", "hidden"],
           "info": "One of 'public', 'private', 'hidden'. Hidden multireddits will not be visible to you except through the API.",
           "required": false
         },
         {
           "name": "weightingScheme",
-          "type": "String",
+          "type": "Select",
+          "options": ["classic", "fresh"],
           "info": "One of 'classic', 'fresh'.",
           "required": false
         },
@@ -5671,7 +5791,8 @@
         },
         {
           "name": "sort",
-          "type": "String",
+          "type": "Select",
+          "options": ["hot", "new", "top", "controversial"],
           "info": "Sorting method. One of 'hot', 'new', 'top', 'controversial', or null.",
           "required": false
         },
@@ -5683,7 +5804,8 @@
         },
         {
           "name": "t",
-          "type": "String",
+          "type": "Select",
+          "options": ["hour", "day", "week", "month", "year", "all"],
           "info": "One of 'hour', 'day', 'week', 'month', 'year', 'all', or null.",
           "required": false
         },
@@ -5867,7 +5989,8 @@
         },
         {
           "name": "sort",
-          "type": "String",
+          "type": "Select",
+          "options": ["relevance", "activity"],
           "info": "Sorting method. One of 'relevance', 'activity'",
           "required": false
         },
@@ -5971,7 +6094,8 @@
         },
         {
           "name": "num",
-          "type": "String",
+          "type": "Select",
+          "options": ["1", "2"],
           "info": "Argument can be used to select a specific sticky (an integer between 1 and 2 (default: 1)).",
           "required": false
         }
@@ -6569,7 +6693,8 @@
         },
         {
           "name": "iconName",
-          "type": "String",
+          "type": "Select",
+          "options": ["art and design", "ask", "books", "business", "cars", "comics", "cute animals", "diy", "entertainment", "food and drink", "funny", "games", "grooming", "health", "life advice", "military", "models pinup", "music", "news", "philosophy", "pictures and gifs", "science", "shopping", "sports", "style", "tech", "travel", "unusual stories", "video", "None"],
           "info": "One of('art and design', 'ask', 'books', 'business', 'cars', 'comics', 'cute animals', 'diy', 'entertainment', 'food and drink', 'funny', 'games', 'grooming', 'health', 'life advice', 'military', 'models pinup', 'music', 'news', 'philosophy', 'pictures and gifs', 'science', 'shopping', 'sports', 'style', 'tech', 'travel', 'unusual stories', 'video', '', 'None').",
           "required": false
         },
@@ -6581,19 +6706,27 @@
         },
         {
           "name": "subredditsName",
-          "type": "String",
-          "info": "Comma-separated string of subreddits name.",
-          "required": false
+          "type": "List",
+          "info": "List string of subreddits name.",
+          "required": false,
+          "structure": {
+            "name": "name",
+            "type": "String",
+            "info": "Subreddits name",
+            "required": false
+          }
         },
         {
           "name": "visibility",
-          "type": "String",
+          "type": "Select",
+          "options": ["public", "private", "hidden"],
           "info": "One of 'public', 'private', 'hidden'. Hidden multireddits will not be visible to you except through the API.",
           "required": false
         },
         {
           "name": "weightingScheme",
-          "type": "String",
+          "type": "Select",
+          "options": ["classic", "fresh"],
           "info": "One of 'classic', 'fresh'.",
           "required": false
         },
@@ -6831,31 +6964,36 @@
         },
         {
           "name": "suggestedCommentSort",
-          "type": "String",
+          "type": "Select",
+          "options": ["confidence", "top", "new", "controversial", "old", "random", "qa", "live"],
           "info": "One of (confidence, top, new, controversial, old, random, qa, live).",
           "required": false
         },
         {
           "name": "linkType",
-          "type": "String",
+          "type": "Select",
+          "options": ["any", "link", "self"],
           "info": "One of (any, link, self).",
           "required": false
         },
         {
           "name": "spamComments",
-          "type": "String",
+          "type": "Select",
+          "options": ["low", "high", "all"],
           "info": "One of (low, high, all).",
           "required": false
         },
         {
           "name": "spamLinks",
-          "type": "String",
+          "type": "Select",
+          "options": ["low", "high", "all"],
           "info": "One of (low, high, all).",
           "required": false
         },
         {
           "name": "spamSelfposts",
-          "type": "String",
+          "type": "Select",
+          "options": ["low", "high", "all"],
           "info": "One of (low, high, all).",
           "required": false
         },
@@ -6867,7 +7005,8 @@
         },
         {
           "name": "type",
-          "type": "String",
+          "type": "Select",
+          "options": ["gold_restricted", "archived", "restricted", "gold_only", "employees_only", "private", "public"],
           "info": "One of (gold_restricted, archived, restricted, gold_only, employees_only, private, public).",
           "required": false
         },
@@ -6885,7 +7024,8 @@
         },
         {
           "name": "wikimode",
-          "type": "String",
+          "type": "Select",
+          "options": ["disabled", "modonly", "anyone"],
           "info": "One of (disabled, modonly, anyone).",
           "required": false
         },
@@ -7233,7 +7373,8 @@
         },
         {
           "name": "type",
-          "type": "String",
+          "type": "Select",
+          "options": ["banuser", "unbanuser", "removelink", "approvelink", "removecomment", "approvecomment", "addmoderator", "invitemoderator", "uninvitemoderator", "acceptmoderatorinvite", "removemoderator", "addcontributor", "removecontributor", "editsettings", "editflair", "distinguish", "marknsfw", "wikibanned", "wikicontributor", "wikiunbanned", "wikipagelisted", "removewikicontributor", "wikirevise", "wikipermlevel", "ignorereports", "unignorereports", "setpermissions", "setsuggestedsort", "sticky", "unsticky", "setcontestmode", "unsetcontestmode", "lock", "unlock", "muteuser", "unmuteuser", "createrule", "editrule", "deleterule", "spoiler", "unspoiler", "modmail_enrollment"],
           "info": "Filter by mod action, one of (banuser, unbanuser, removelink, approvelink, removecomment, approvecomment, addmoderator, invitemoderator, uninvitemoderator, acceptmoderatorinvite, removemoderator, addcontributor, removecontributor, editsettings, editflair, distinguish, marknsfw, wikibanned, wikicontributor, wikiunbanned, wikipagelisted, removewikicontributor, wikirevise, wikipermlevel, ignorereports, unignorereports, setpermissions, setsuggestedsort, sticky, unsticky, setcontestmode, unsetcontestmode, lock, unlock, muteuser, unmuteuser, createrule, editrule, deleterule, spoiler, unspoiler, modmail_enrollment).",
           "required": false
         },
@@ -7489,31 +7630,36 @@
         },
         {
           "name": "suggestedCommentSort",
-          "type": "String",
+          "type": "Select",
+          "options": ["confidence", "top", "new", "controversial", "old", "random", "qa", "live"],
           "info": "One of (confidence, top, new, controversial, old, random, qa, live).",
           "required": false
         },
         {
           "name": "linkType",
-          "type": "String",
+          "type": "Select",
+          "options": ["any", "link", "self"],
           "info": "One of (any, link, self).",
           "required": false
         },
         {
           "name": "spamComments",
-          "type": "String",
+          "type": "Select",
+          "options": ["low", "high", "all"],
           "info": "One of (low, high, all).",
           "required": false
         },
         {
           "name": "spamLinks",
-          "type": "String",
+          "type": "Select",
+          "options": ["low", "high", "all"],
           "info": "One of (low, high, all).",
           "required": false
         },
         {
           "name": "spamSelfposts",
-          "type": "String",
+          "type": "Select",
+          "options": ["low", "high", "all"],
           "info": "One of (low, high, all).",
           "required": false
         },
@@ -7525,7 +7671,8 @@
         },
         {
           "name": "type",
-          "type": "String",
+          "type": "Select",
+          "options": ["gold_restricted", "archived", "restricted", "gold_only", "employees_only", "private", "public"],
           "info": "One of (gold_restricted, archived, restricted, gold_only, employees_only, private, public).",
           "required": false
         },
@@ -7543,7 +7690,8 @@
         },
         {
           "name": "wikimode",
-          "type": "String",
+          "type": "Select",
+          "options": ["disabled", "modonly", "anyone"],
           "info": "One of (disabled, modonly, anyone).",
           "required": false
         },
@@ -7757,13 +7905,15 @@
         },
         {
           "name": "uploadType",
-          "type": "String",
+          "type": "Select",
+          "options": ["img", "header", "icon", "banner"],
           "info": "One of 'img', 'header', 'icon', 'banner'.",
           "required": false
         },
         {
           "name": "imageType",
-          "type": "String",
+          "type": "Select",
+          "options": ["png", "jpg"],
           "info": "One of 'png' or 'jpg'.",
           "required": false
         }
@@ -7911,7 +8061,8 @@
         },
         {
           "name": "only",
-          "type": "String",
+          "type": "Select",
+          "options": ["links", "comments"],
           "info": "One of (links, comments).",
           "required": false
         },

@@ -43,7 +43,7 @@ Manually revoking a token.
 | appClientId    | credentials| Id of your app.
 | appClientSecret| credentials| Secret of your app.
 | token          | String     | The access token or refresh token that the client wishes to revoke.
-| tokenTypeHint  | String     | The type of token being revoked (refresh_token or access_token).
+| tokenTypeHint  | Select     | The type of token being revoked (refresh_token or access_token).
 
 ## Reddit.getMe
 Gets information about the current user's account.
@@ -113,7 +113,7 @@ Deletes all flair templates of the selected type from the selected subreddit.
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
 | subreddit  | String     | Subreddit of flairs to clear.
-| flairType  | String     | One of (USER_FLAIR, LINK_FLAIR).
+| flairType  | Select     | One of (USER_FLAIR, LINK_FLAIR).
 
 ## Reddit.deleteUserFlair
 Deletes a user's flair from the specified subreddit.
@@ -157,9 +157,9 @@ Updates all options in a subreddit's flair configuration.
 | accessToken               | String     | Access token.
 | subreddit                 | String     | Subreddit in which to configure flair.
 | flairEnabled              | Boolean    | Whether or not user flair is displayed.
-| flairPosition             | String     | On which side to display user flair. One of 'left' or 'right'.
+| flairPosition             | Select     | On which side to display user flair. One of 'left' or 'right'.
 | flairSelfAssignEnabled    | Boolean    | Whether or not users can select their own user flair.
-| linkFlairPosition         | String     | On which side to display links' flair. One of 'left', 'right', or 'none'.
+| linkFlairPosition         | Select     | On which side to display links' flair. One of 'left', 'right', or 'none'.
 | linkFlairSelfAssignEnabled| Boolean    | Whether or not users can select their own links' flair.
 
 ## Reddit.getUserFlairList
@@ -286,7 +286,7 @@ Hides a post from user's listings.
 |------------|------------|----------
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
-| id         | String     | A comma-separated list of link fullnames.
+| id         | List       | List of link fullnames.
 
 ## Reddit.getInfo
 Gives a listing of information on objects.
@@ -295,7 +295,7 @@ Gives a listing of information on objects.
 |------------|------------|----------
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
-| id         | String     | A comma-separated list of thing.
+| id         | List       | List of thing.
 | url        | String     | A valid URL.
 
 ## Reddit.lockThread
@@ -324,8 +324,8 @@ Get comments in a tree that are hidden by "load more comments". NOTE: Only make 
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
 | linkId     | String     | Fullname (thing ID) of link/post of the comment tree.
-| children   | String     | A comma-delimited list of comment ID36s for which to retrieve children.
-| sort       | String     | One of (confidence, top, new, controversial, old, random, qa, live).
+| children   | List       | List of comment ID36s for which to retrieve children.
+| sort       | Select     | One of (confidence, top, new, controversial, old, random, qa, live).
 | id         | String     | Id of the associated MoreChildren object.
 
 ## Reddit.report
@@ -386,7 +386,7 @@ Stickies a post at the top of the subreddit.
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
 | id         | String     | Thing ID of post to sticky.
-| num        | Number     | Position of new sticky. 1 for top, 2 for bottom. Defaults to 2.
+| num        | Select     | Position of new sticky. 1 for top, 2 for bottom. Defaults to 2.
 | state      | Boolean    | State boolean value.
 
 ## Reddit.setSuggestedSort
@@ -397,7 +397,7 @@ Sets the default sort of a link's comments.
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
 | thing      | String     | Thing ID of link to set suggested sort.
-| sort       | String     | Sort method. One of: 'confidence', 'top', 'new', 'hot', 'controversial', 'old', 'random', 'qa'
+| sort       | Select     | Sort method. One of: 'confidence', 'top', 'new', 'hot', 'controversial', 'old', 'random', 'qa'
 
 ## Reddit.createPost
 Create new post.
@@ -411,7 +411,7 @@ Create new post.
 | text                | String     | Raw markdown text of the submission.
 | url                 | String     | Link to post.
 | sendreplies         | Boolean    | Send comment replies to the current user's inbox. True to enable, false to disable.
-| kind                | String     | One of (link, self, image).
+| kind                | Select     | One of (link, self, image).
 | resubmit            | Boolean    | Boolean value.
 | extension           | String     | Extension used for redirects.
 | g-recaptcha-response| String     | Recaptcha response.
@@ -424,7 +424,7 @@ Unhides a post from user's hidden posts.
 |------------|------------|----------
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
-| id         | String     | A comma-separated list of link fullnames to unhide.
+| id         | List       | List of link fullnames to unhide.
 
 ## Reddit.unlockThread
 Unlock a post and allow any new comments.
@@ -490,7 +490,7 @@ Retrieves a listing of links by their specified thing ID.
 |------------|------------|----------
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
-| names      | String     | A comma-separated list thing ID's of links to retrieve.
+| names      | List       | List thing ID's of links to retrieve.
 
 ## Reddit.getComments
 Retrieves a listing of comments and children for a link and optionally a specific comment
@@ -505,7 +505,7 @@ Retrieves a listing of comments and children for a link and optionally a specifi
 | context    | Number     | Number of levels up of parent comments to retrieve. Only applicable to child comments (between 0 and 8).
 | depth      | Number     | Depth of child comments to retrieve.
 | limit      | Number     | Limit of comments to retrieve.
-| sort       | String     | How to sort the comments, one of 'confidence', 'top', 'new', 'hot', 'controversial', 'old', 'random', 'qa'
+| sort       | Select     | How to sort the comments, one of 'confidence', 'top', 'new', 'hot', 'controversial', 'old', 'random', 'qa'
 | showedits  | Boolean    | Show edited comments, perhaps? Not well documented by reddit.
 | showmore   | Boolean    | Include links to show more comments, maybe? Not well documented by reddit.
 | srDetail   | String     | Expand subreddits.
@@ -548,7 +548,7 @@ Retrieves the controversial listing for the optionally specified subreddit.
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
 | subreddit  | String     | Subreddit of listing to retrieve. If none, defaults to front page.
-| t          | String     | Time constraint for age of items on list. One of hour, day, week, month, year, all.
+| t          | Select     | Time constraint for age of items on list. One of hour, day, week, month, year, all.
 | after      | String     | Get items lower on list than this entry. Does not mean chronologically.
 | before     | String     | Get items higher on list than this entry. Does not mean chronologically.
 | count      | Number     | A positive integer (default: 0).
@@ -587,7 +587,7 @@ Retrieves the top listing for the optionally specified subreddit.
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
 | subreddit  | String     | Subreddit of listing to retrieve. If none, defaults to front page.
-| t          | String     | Time constraint for age of items on list. One of 'hour', 'day', 'week', 'month', 'year', 'all'.
+| t          | Select     | Time constraint for age of items on list. One of 'hour', 'day', 'week', 'month', 'year', 'all'.
 | after      | String     | Get items lower on list than this entry. Does not mean chronologically.
 | before     | String     | Get items higher on list than this entry. Does not mean chronologically.
 | count      | Number     | A positive integer (default: 0).
@@ -623,7 +623,7 @@ Get a listing of live events by id.
 |------------|------------|----------
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
-| names      | String     | A comma-separated list of ids.
+| names      | List       | List of ids.
 
 ## Reddit.createLiveThread
 Creates a new live thread.
@@ -696,7 +696,7 @@ Invite another user to contribute to the thread.
 | thread     | String     | The thread's name.
 | name       | String     | The the name of an existing user.
 | permissions| String     | Permission description e.g. +update,+edit,-manage.
-| type       | String     | One of (liveupdate_contributor_invite, liveupdate_contributor).
+| type       | Select     | One of (liveupdate_contributor_invite, liveupdate_contributor).
 
 ## Reddit.leaveContributerFromThread
 Abdicate contributorship of the thread.
@@ -715,7 +715,7 @@ Report the thread for violating the rules of reddit.
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
 | thread     | String     | The thread's name.
-| type       | String     | One of (spam, vote-manipulation, personal-information, sexualizing-minors, site-breaking).
+| type       | Select     | One of (spam, vote-manipulation, personal-information, sexualizing-minors, site-breaking).
 
 ## Reddit.revokeUserContributorship
 Revoke another user's contributorship.
@@ -747,7 +747,7 @@ Change a contributor or contributor invite's permissions.
 | thread     | String     | The thread's name.
 | name       | String     | The the name of an existing user.
 | permissions| String     | Permission description e.g. +update,+edit,-manage.
-| type       | String     | One of (liveupdate_contributor_invite, liveupdate_contributor).
+| type       | Select     | One of (liveupdate_contributor_invite, liveupdate_contributor).
 
 ## Reddit.postUpdateToThread
 Post an update to the thread.
@@ -804,7 +804,7 @@ Collapse one or more messages in modmail.
 |------------|------------|----------
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
-| id         | String     | Comma-separated thing ID's of messages to collapse.
+| id         | List       | List of ID's of messages to collapse.
 
 ## Reddit.composeMessage
 Sends a message to a user or subreddit.
@@ -843,7 +843,7 @@ Marks one or more messages as read.
 |------------|------------|----------
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
-| id         | String     | A comma-separated string of one or more message thing ID's (t4_).
+| id         | List       | List of one or more message thing ID's (t4_).
 
 ## Reddit.unblockSubredditByMessage
 Unblock a subreddit using a message they sent you.
@@ -861,7 +861,7 @@ Uncollapse one or more messages in modmail.
 |------------|------------|----------
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
-| id         | String     | Comma-separated thing ID's of messages to uncollapse.
+| id         | List       | List of messages ID's to uncollapse.
 
 ## Reddit.markMessageUnread
 Marks one or more messages as unread.
@@ -870,7 +870,7 @@ Marks one or more messages as unread.
 |------------|------------|----------
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
-| id         | String     | A comma-separated string of one or more message thing ID's (t4_).
+| id         | List       | List of one or more message thing ID's (t4_).
 
 ## Reddit.getInbox
 Retrieves the current user's personal message inbox.
@@ -923,8 +923,8 @@ Obtain posts and comments upvoted by the specified user.
 | accessToken| String     | Access token.
 | username   | String     | Username of user for whom to retrieve records. Defaults to the current user.
 | show       | String     | One of (given).
-| sort       | String     | One of (hot, new, top, controversial).
-| t          | String     | One of (hour, day, week, month, year, all).
+| sort       | Select     | One of (hot, new, top, controversial).
+| t          | Select     | One of (hour, day, week, month, year, all).
 | after      | String     | Get items lower on list than this entry. Does not mean chronologically.
 | before     | String     | Get items higher on list than this entry. Does not mean chronologically.
 | count      | Number     | A positive integer (default: 0).
@@ -940,8 +940,8 @@ Obtain posts and comments downvoted by the specified user.
 | accessToken| String     | Access token.
 | username   | String     | Username of user for whom to retrieve records. Defaults to the current user.
 | show       | String     | One of (given).
-| sort       | String     | One of (hot, new, top, controversial).
-| t          | String     | One of (hour, day, week, month, year, all).
+| sort       | Select     | One of (hot, new, top, controversial).
+| t          | Select     | One of (hour, day, week, month, year, all).
 | after      | String     | Get items lower on list than this entry. Does not mean chronologically.
 | before     | String     | Get items higher on list than this entry. Does not mean chronologically.
 | count      | Number     | A positive integer (default: 0).
@@ -957,8 +957,8 @@ Obtain only comments made by the specified user.
 | accessToken| String     | Access token.
 | username   | String     | Username of user for whom to retrieve records. Defaults to the current user.
 | show       | String     | One of (given).
-| sort       | String     | One of (hot, new, top, controversial).
-| t          | String     | One of (hour, day, week, month, year, all).
+| sort       | Select     | One of (hot, new, top, controversial).
+| t          | Select     | One of (hour, day, week, month, year, all).
 | after      | String     | Get items lower on list than this entry. Does not mean chronologically.
 | before     | String     | Get items higher on list than this entry. Does not mean chronologically.
 | count      | Number     | A positive integer (default: 0).
@@ -974,8 +974,8 @@ Obtain only posts made by the specified user.
 | accessToken| String     | Access token.
 | username   | String     | Username of user for whom to retrieve records. Defaults to the current user.
 | show       | String     | One of (given).
-| sort       | String     | One of (hot, new, top, controversial).
-| t          | String     | One of (hour, day, week, month, year, all).
+| sort       | Select     | One of (hot, new, top, controversial).
+| t          | Select     | One of (hour, day, week, month, year, all).
 | after      | String     | Get items lower on list than this entry. Does not mean chronologically.
 | before     | String     | Get items higher on list than this entry. Does not mean chronologically.
 | count      | Number     | A positive integer (default: 0).
@@ -991,8 +991,8 @@ Obtain posts and comments gilded (given) by the specified user.
 | accessToken| String     | Access token.
 | username   | String     | Username of user for whom to retrieve records. Defaults to the current user.
 | show       | String     | One of (given).
-| sort       | String     | One of (hot, new, top, controversial).
-| t          | String     | One of (hour, day, week, month, year, all).
+| sort       | Select     | One of (hot, new, top, controversial).
+| t          | Select     | One of (hour, day, week, month, year, all).
 | after      | String     | Get items lower on list than this entry. Does not mean chronologically.
 | before     | String     | Get items higher on list than this entry. Does not mean chronologically.
 | count      | Number     | A positive integer (default: 0).
@@ -1008,8 +1008,8 @@ Obtain posts and comments gilded (received) by the specified user.
 | accessToken| String     | Access token.
 | username   | String     | Username of user for whom to retrieve records. Defaults to the current user.
 | show       | String     | One of (given).
-| sort       | String     | One of (hot, new, top, controversial).
-| t          | String     | One of (hour, day, week, month, year, all).
+| sort       | Select     | One of (hot, new, top, controversial).
+| t          | Select     | One of (hour, day, week, month, year, all).
 | after      | String     | Get items lower on list than this entry. Does not mean chronologically.
 | before     | String     | Get items higher on list than this entry. Does not mean chronologically.
 | count      | Number     | A positive integer (default: 0).
@@ -1025,8 +1025,8 @@ Obtain posts and comments saved by the specified user.
 | accessToken| String     | Access token.
 | username   | String     | Username of user for whom to retrieve records. Defaults to the current user.
 | show       | String     | One of (given).
-| sort       | String     | One of (hot, new, top, controversial).
-| t          | String     | One of (hour, day, week, month, year, all).
+| sort       | Select     | One of (hot, new, top, controversial).
+| t          | Select     | One of (hour, day, week, month, year, all).
 | after      | String     | Get items lower on list than this entry. Does not mean chronologically.
 | before     | String     | Get items higher on list than this entry. Does not mean chronologically.
 | count      | Number     | A positive integer (default: 0).
@@ -1042,8 +1042,8 @@ Obtain posts and comments hidden by the specified user.
 | accessToken| String     | Access token.
 | username   | String     | Username of user for whom to retrieve records. Defaults to the current user.
 | show       | String     | One of (given).
-| sort       | String     | One of (hot, new, top, controversial).
-| t          | String     | One of (hour, day, week, month, year, all).
+| sort       | Select     | One of (hot, new, top, controversial).
+| t          | Select     | One of (hour, day, week, month, year, all).
 | after      | String     | Get items lower on list than this entry. Does not mean chronologically.
 | before     | String     | Get items higher on list than this entry. Does not mean chronologically.
 | count      | Number     | A positive integer (default: 0).
@@ -1069,8 +1069,8 @@ Retrieve a list of recommended subreddits based on the names of existing ones.
 |------------|------------|----------
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
-| srnames    | String     | Comma-delimited list of subreddits on which to base recommendations.
-| omit       | String     | Omit these specific subreddits from results (comma-delimited list of subreddit names).
+| srnames    | List       | List of subreddits on which to base recommendations.
+| omit       | List       | Omit these specific subreddits from results (List of subreddit names).
 | over18     | Boolean    | Include subreddits that are set as NSFW (over_18).
 
 ## Reddit.deleteSubredditImage
@@ -1252,12 +1252,12 @@ Perform a search query. Somewhat untested due to the complexity of and possible 
 | accessToken  | String     | Access token.
 | q            | String     | Query of which to search.
 | subreddit    | String     | Subreddit to which to restrict search.
-| sort         | String     | Sort results by one of 'relevance', 'hot', 'top', 'new', 'comments'. Defaults to 'relevance'.
-| t            | String     | One of 'hour', 'day', 'week', 'month', 'year', 'all'. Defaults to all.
-| type         | String     | Comma-delimited list of result types: 'sr', 'link', or null.
+| sort         | Select     | Sort results by one of 'relevance', 'hot', 'top', 'new', 'comments'. Defaults to 'relevance'.
+| t            | Select     | One of 'hour', 'day', 'week', 'month', 'year', 'all'. Defaults to all.
+| type         | List       | List of result types: 'sr', 'link', or null.
 | includeFacets| Boolean    | Include facets.
 | restrictSr   | Boolean    | Restrict subreddit.
-| syntax       | String     | One of (cloudsearch, lucene, plain).
+| syntax       | Select     | One of (cloudsearch, lucene, plain).
 | after        | String     | Fullname of a thing.
 | before       | String     | Fullname of a thing.
 | count        | Number     | A positive integer (default: 0).
@@ -1292,11 +1292,11 @@ Create or update a multireddit.
 | multiredditOwner | String     | Username of multireddit owner.
 | displayName      | String     | A string no longer than 50 characters.
 | descriptionMd    | String     | Multireddit sidebar text (raw markdown text).
-| iconName         | String     | One of('art and design', 'ask', 'books', 'business', 'cars', 'comics', 'cute animals', 'diy', 'entertainment', 'food and drink', 'funny', 'games', 'grooming', 'health', 'life advice', 'military', 'models pinup', 'music', 'news', 'philosophy', 'pictures and gifs', 'science', 'shopping', 'sports', 'style', 'tech', 'travel', 'unusual stories', 'video', '', 'None').
+| iconName         | Select     | One of('art and design', 'ask', 'books', 'business', 'cars', 'comics', 'cute animals', 'diy', 'entertainment', 'food and drink', 'funny', 'games', 'grooming', 'health', 'life advice', 'military', 'models pinup', 'music', 'news', 'philosophy', 'pictures and gifs', 'science', 'shopping', 'sports', 'style', 'tech', 'travel', 'unusual stories', 'video', '', 'None').
 | keyColor         | String     | A 6 - digit rgb hex color, e.g. '#AABBCC'.
-| subredditsName   | String     | Comma-separated string of subreddits name.
-| visibility       | String     | One of 'public', 'private', 'hidden'. Hidden multireddits will not be visible to you except through the API.
-| weightingScheme  | String     | One of 'classic', 'fresh'.
+| subredditsName   | List       | List of subreddits name.
+| visibility       | Select     | One of 'public', 'private', 'hidden'. Hidden multireddits will not be visible to you except through the API.
+| weightingScheme  | Select     | One of 'classic', 'fresh'.
 | expandSrs        | Boolean    | Expand subreddits.
 
 ## Reddit.multiAddSubreddit
@@ -1351,9 +1351,9 @@ Obtain posts and comments made by the specified user.
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
 | username   | String     | Username of user for whom to retrieve records.
-| sort       | String     | Sorting method. One of 'hot', 'new', 'top', 'controversial', or null.
+| sort       | Select     | Sorting method. One of 'hot', 'new', 'top', 'controversial', or null.
 | show       | String     | One of (given).
-| t          | String     | One of 'hour', 'day', 'week', 'month', 'year', 'all', or null.
+| t          | Select     | One of 'hour', 'day', 'week', 'month', 'year', 'all', or null.
 | after      | String     | Fullname of a thing.
 | before     | String     | Fullname of a thing.
 | count      | Number     | A positive integer (default: 0).
@@ -1397,7 +1397,7 @@ Search for subreddits by title and description.
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
 | q          | String     | Query with which to search
-| sort       | String     | Sorting method. One of 'relevance', 'activity'
+| sort       | Select     | Sorting method. One of 'relevance', 'activity'
 | after      | String     | Fullname of a thing.
 | before     | String     | Fullname of a thing.
 | count      | Number     | A positive integer (default: 0).
@@ -1421,7 +1421,7 @@ Retrieve a subreddit's stickied posts.
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
 | subreddit  | String     | Subreddit from which to retrieve sticky posts.
-| num        | String     | Argument can be used to select a specific sticky (an integer between 1 and 2 (default: 1)).
+| num        | Select     | Argument can be used to select a specific sticky (an integer between 1 and 2 (default: 1)).
 
 ## Reddit.leaveContributor
 Abdicate approved submitter status in a subreddit.
@@ -1564,11 +1564,11 @@ Create a multi. Responds with 409 Conflict if it already exists.
 | multiredditOwner | String     | Username of multireddit owner.
 | displayName      | String     | A string no longer than 50 characters.
 | descriptionMd    | String     | Multireddit sidebar text (raw markdown text).
-| iconName         | String     | One of('art and design', 'ask', 'books', 'business', 'cars', 'comics', 'cute animals', 'diy', 'entertainment', 'food and drink', 'funny', 'games', 'grooming', 'health', 'life advice', 'military', 'models pinup', 'music', 'news', 'philosophy', 'pictures and gifs', 'science', 'shopping', 'sports', 'style', 'tech', 'travel', 'unusual stories', 'video', '', 'None').
+| iconName         | Select     | One of('art and design', 'ask', 'books', 'business', 'cars', 'comics', 'cute animals', 'diy', 'entertainment', 'food and drink', 'funny', 'games', 'grooming', 'health', 'life advice', 'military', 'models pinup', 'music', 'news', 'philosophy', 'pictures and gifs', 'science', 'shopping', 'sports', 'style', 'tech', 'travel', 'unusual stories', 'video', '', 'None').
 | keyColor         | String     | A 6 - digit rgb hex color, e.g. '#AABBCC'.
-| subredditsName   | String     | Comma-separated string of subreddits name.
-| visibility       | String     | One of 'public', 'private', 'hidden'. Hidden multireddits will not be visible to you except through the API.
-| weightingScheme  | String     | One of 'classic', 'fresh'.
+| subredditsName   | List       | List of subreddits name.
+| visibility       | Select     | One of 'public', 'private', 'hidden'. Hidden multireddits will not be visible to you except through the API.
+| weightingScheme  | Select     | One of 'classic', 'fresh'.
 | expandSrs        | Boolean    | Expand subreddits.
 
 ## Reddit.muteUserByMessage
@@ -1621,16 +1621,16 @@ Change a subreddit's configuration.
 | submitLinkLabel        | String     | A string no longer than 60 characters.
 | submitText             | String     | Raw markdown text.
 | submitTextLabel        | String     | A string no longer than 60 characters.
-| suggestedCommentSort   | String     | One of (confidence, top, new, controversial, old, random, qa, live).
-| linkType               | String     | One of (any, link, self).
-| spamComments           | String     | One of (low, high, all).
-| spamLinks              | String     | One of (low, high, all).
-| spamSelfposts          | String     | One of (low, high, all).
+| suggestedCommentSort   | Select     | One of (confidence, top, new, controversial, old, random, qa, live).
+| linkType               | Select     | One of (any, link, self).
+| spamComments           | Select     | One of (low, high, all).
+| spamLinks              | Select     | One of (low, high, all).
+| spamSelfposts          | Select     | One of (low, high, all).
 | spoilersEnabled        | Boolean    | Spoilers enabled, boolean value.
-| type                   | String     | One of (gold_restricted, archived, restricted, gold_only, employees_only, private, public).
+| type                   | Select     | One of (gold_restricted, archived, restricted, gold_only, employees_only, private, public).
 | wikiEditAge            | Number     | An integer greater than 0 (default: 0).
 | wikiEditKarma          | Number     | An integer greater than 0 (default: 0).
-| wikimode               | String     | One of (disabled, modonly, anyone).
+| wikimode               | Select     | One of (disabled, modonly, anyone).
 | allowImages            | Boolean    | Allow images, boolean value.
 | allowTop               | Boolean    | Allow top, boolean value.
 | hideAds                | Boolean    | Hide ads, boolean value.
@@ -1708,7 +1708,7 @@ Retrieves recent entries from the moderation log for the specified subreddit.
 | accessToken| String     | Access token.
 | subreddit  | String     | Subreddit of log to retrieve. All moderated subreddits by default.
 | mod        | String     | Filter by moderator.
-| type       | String     | Filter by mod action, one of (banuser, unbanuser, removelink, approvelink, removecomment, approvecomment, addmoderator, invitemoderator, uninvitemoderator, acceptmoderatorinvite, removemoderator, addcontributor, removecontributor, editsettings, editflair, distinguish, marknsfw, wikibanned, wikicontributor, wikiunbanned, wikipagelisted, removewikicontributor, wikirevise, wikipermlevel, ignorereports, unignorereports, setpermissions, setsuggestedsort, sticky, unsticky, setcontestmode, unsetcontestmode, lock, unlock, muteuser, unmuteuser, createrule, editrule, deleterule, spoiler, unspoiler, modmail_enrollment).
+| type       | Select     | Filter by mod action, one of (banuser, unbanuser, removelink, approvelink, removecomment, approvecomment, addmoderator, invitemoderator, uninvitemoderator, acceptmoderatorinvite, removemoderator, addcontributor, removecontributor, editsettings, editflair, distinguish, marknsfw, wikibanned, wikicontributor, wikiunbanned, wikipagelisted, removewikicontributor, wikirevise, wikipermlevel, ignorereports, unignorereports, setpermissions, setsuggestedsort, sticky, unsticky, setcontestmode, unsetcontestmode, lock, unlock, muteuser, unmuteuser, createrule, editrule, deleterule, spoiler, unspoiler, modmail_enrollment).
 | after      | String     | Fullname of a thing.
 | before     | String     | Fullname of a thing.
 | count      | Number     | A positive integer (default: 0).
@@ -1764,16 +1764,16 @@ Create a new subreddit.
 | submitLinkLabel        | String     | A string no longer than 60 characters.
 | submitText             | String     | Raw markdown text.
 | submitTextLabel        | String     | A string no longer than 60 characters.
-| suggestedCommentSort   | String     | One of (confidence, top, new, controversial, old, random, qa, live).
-| linkType               | String     | One of (any, link, self).
-| spamComments           | String     | One of (low, high, all).
-| spamLinks              | String     | One of (low, high, all).
-| spamSelfposts          | String     | One of (low, high, all).
+| suggestedCommentSort   | Select     | One of (confidence, top, new, controversial, old, random, qa, live).
+| linkType               | Select     | One of (any, link, self).
+| spamComments           | Select     | One of (low, high, all).
+| spamLinks              | Select     | One of (low, high, all).
+| spamSelfposts          | Select     | One of (low, high, all).
 | spoilersEnabled        | Boolean    | Spoilers enabled, boolean value.
-| type                   | String     | One of (gold_restricted, archived, restricted, gold_only, employees_only, private, public).
+| type                   | Select     | One of (gold_restricted, archived, restricted, gold_only, employees_only, private, public).
 | wikiEditAge            | Number     | An integer greater than 0 (default: 0).
 | wikiEditKarma          | Number     | An integer greater than 0 (default: 0).
-| wikimode               | String     | One of (disabled, modonly, anyone).
+| wikimode               | Select     | One of (disabled, modonly, anyone).
 | allowImages            | Boolean    | Allow images, boolean value.
 | allowTop               | Boolean    | Allow top, boolean value.
 | hideAds                | Boolean    | Hide ads, boolean value.
@@ -1822,8 +1822,8 @@ Upload an image to the specified subreddit.
 | subreddit  | String     | Subreddit to which to upload image.
 | file       | String     | Relative or absolute path of file (maximum size of 500 KiB).
 | name       | String     | If &upload_type is 'img', assign the image this name. Ignored otherwise.
-| uploadType | String     | One of 'img', 'header', 'icon', 'banner'.
-| imageType  | String     | One of 'png' or 'jpg'.
+| uploadType | Select     | One of 'img', 'header', 'icon', 'banner'.
+| imageType  | Select     | One of 'png' or 'jpg'.
 
 ## Reddit.distinguish
 Mod distinguish a post or comment.
@@ -1861,7 +1861,7 @@ Retrieves a list of things that have not been moderated in the specified subredd
 | appClientId| credentials| Id of your app.
 | accessToken| String     | Access token.
 | subreddit  | String     | Subreddit of items to retrieve. All moderated subreddits by default.
-| only       | String     | One of (links, comments).
+| only       | Select     | One of (links, comments).
 | after      | String     | Fullname of a thing.
 | before     | String     | Fullname of a thing.
 | count      | Number     | A positive integer (default: 0).
